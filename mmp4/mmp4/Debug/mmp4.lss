@@ -1,0 +1,2761 @@
+
+mmp4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  00800200  00000b1a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000ac6  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000b1a  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000b4c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000040  00000000  00000000  00000b8c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00001279  00000000  00000000  00000bcc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000c87  00000000  00000000  00001e45  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000bd4  00000000  00000000  00002acc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  0000009c  00000000  00000000  000036a0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000825  00000000  00000000  0000373c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00001ab7  00000000  00000000  00003f61  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000030  00000000  00000000  00005a18  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	79 c0       	rjmp	.+242    	; 0xf8 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	77 c0       	rjmp	.+238    	; 0xf8 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	75 c0       	rjmp	.+234    	; 0xf8 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	73 c0       	rjmp	.+230    	; 0xf8 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	71 c0       	rjmp	.+226    	; 0xf8 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	6f c0       	rjmp	.+222    	; 0xf8 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	6d c0       	rjmp	.+218    	; 0xf8 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	6b c0       	rjmp	.+214    	; 0xf8 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	69 c0       	rjmp	.+210    	; 0xf8 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	67 c0       	rjmp	.+206    	; 0xf8 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	65 c0       	rjmp	.+202    	; 0xf8 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	63 c0       	rjmp	.+198    	; 0xf8 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	61 c0       	rjmp	.+194    	; 0xf8 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	5f c0       	rjmp	.+190    	; 0xf8 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	5d c0       	rjmp	.+186    	; 0xf8 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	5b c0       	rjmp	.+182    	; 0xf8 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	59 c0       	rjmp	.+178    	; 0xf8 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	57 c0       	rjmp	.+174    	; 0xf8 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	55 c0       	rjmp	.+170    	; 0xf8 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	53 c0       	rjmp	.+166    	; 0xf8 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	51 c0       	rjmp	.+162    	; 0xf8 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	4f c0       	rjmp	.+158    	; 0xf8 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	4d c0       	rjmp	.+154    	; 0xf8 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	4b c0       	rjmp	.+150    	; 0xf8 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	49 c0       	rjmp	.+146    	; 0xf8 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	47 c0       	rjmp	.+142    	; 0xf8 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	45 c0       	rjmp	.+138    	; 0xf8 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	43 c0       	rjmp	.+134    	; 0xf8 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	41 c0       	rjmp	.+130    	; 0xf8 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	3f c0       	rjmp	.+126    	; 0xf8 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	3d c0       	rjmp	.+122    	; 0xf8 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	3b c0       	rjmp	.+118    	; 0xf8 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	39 c0       	rjmp	.+114    	; 0xf8 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	37 c0       	rjmp	.+110    	; 0xf8 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	35 c0       	rjmp	.+106    	; 0xf8 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	33 c0       	rjmp	.+102    	; 0xf8 <__bad_interrupt>
+  92:	00 00       	nop
+  94:	31 c0       	rjmp	.+98     	; 0xf8 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	2f c0       	rjmp	.+94     	; 0xf8 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	2d c0       	rjmp	.+90     	; 0xf8 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	2b c0       	rjmp	.+86     	; 0xf8 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	29 c0       	rjmp	.+82     	; 0xf8 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	27 c0       	rjmp	.+78     	; 0xf8 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	25 c0       	rjmp	.+74     	; 0xf8 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	23 c0       	rjmp	.+70     	; 0xf8 <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	21 c0       	rjmp	.+66     	; 0xf8 <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	1f c0       	rjmp	.+62     	; 0xf8 <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	1d c0       	rjmp	.+58     	; 0xf8 <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	1b c0       	rjmp	.+54     	; 0xf8 <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	19 c0       	rjmp	.+50     	; 0xf8 <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	17 c0       	rjmp	.+46     	; 0xf8 <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	15 c0       	rjmp	.+42     	; 0xf8 <__bad_interrupt>
+  ce:	00 00       	nop
+  d0:	13 c0       	rjmp	.+38     	; 0xf8 <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	11 c0       	rjmp	.+34     	; 0xf8 <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	0f c0       	rjmp	.+30     	; 0xf8 <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	0d c0       	rjmp	.+26     	; 0xf8 <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	0b c0       	rjmp	.+22     	; 0xf8 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+  f4:	0d d0       	rcall	.+26     	; 0x110 <main>
+  f6:	e5 c4       	rjmp	.+2506   	; 0xac2 <_exit>
+
+000000f8 <__bad_interrupt>:
+  f8:	83 cf       	rjmp	.-250    	; 0x0 <__vectors>
+
+000000fa <soundVBuzzer>:
+	_delay_ms(1);
+	PORTK = (1<<7);
+	PORTL = p4/60;
+}
+void soundVBuzzer(){
+	PORTK |= (1<<0);
+  fa:	e8 e0       	ldi	r30, 0x08	; 8
+  fc:	f1 e0       	ldi	r31, 0x01	; 1
+  fe:	80 81       	ld	r24, Z
+ 100:	81 60       	ori	r24, 0x01	; 1
+ 102:	80 83       	st	Z, r24
+ 104:	08 95       	ret
+
+00000106 <stopvBuzzer>:
+
+}
+void stopvBuzzer(){
+	PORTK &= (0<<0);
+ 106:	e8 e0       	ldi	r30, 0x08	; 8
+ 108:	f1 e0       	ldi	r31, 0x01	; 1
+ 10a:	80 81       	ld	r24, Z
+ 10c:	10 82       	st	Z, r1
+ 10e:	08 95       	ret
+
+00000110 <main>:
+}
+int main(void)
+{
+ 110:	cf 93       	push	r28
+ 112:	df 93       	push	r29
+ 114:	cd b7       	in	r28, 0x3d	; 61
+ 116:	de b7       	in	r29, 0x3e	; 62
+ 118:	c6 57       	subi	r28, 0x76	; 118
+ 11a:	d1 09       	sbc	r29, r1
+ 11c:	0f b6       	in	r0, 0x3f	; 63
+ 11e:	f8 94       	cli
+ 120:	de bf       	out	0x3e, r29	; 62
+ 122:	0f be       	out	0x3f, r0	; 63
+ 124:	cd bf       	out	0x3d, r28	; 61
+	
+	DDRF = 0b00000111; //keypad
+ 126:	87 e0       	ldi	r24, 0x07	; 7
+ 128:	80 bb       	out	0x10, r24	; 16
+    /* Replace with your application code */
+	DDRK = 0xff;
+ 12a:	8f ef       	ldi	r24, 0xFF	; 255
+ 12c:	80 93 07 01 	sts	0x0107, r24	; 0x800107 <__TEXT_REGION_LENGTH__+0x700107>
+	DDRL = 0xff;
+ 130:	80 93 0a 01 	sts	0x010A, r24	; 0x80010a <__TEXT_REGION_LENGTH__+0x70010a>
+	DDRB = 0xFF;
+ 134:	84 b9       	out	0x04, r24	; 4
+	int p4_max_grazing = 240;  //default grazing of 4 min
+	int MAX_DRINKING = 120;  //default water time of 2 min
+	
+	//SETUP timer for check every second
+	int timerOverflowCount = 0;
+	TCNT0 = 0x00;
+ 136:	16 bc       	out	0x26, r1	; 38
+	TCCR0B = (1<<CS10);
+ 138:	81 e0       	ldi	r24, 0x01	; 1
+ 13a:	85 bd       	out	0x25, r24	; 37
+	
+	//set maximum grazing and drinking time
+	int p1_max_grazing = 240;  //default grazing of 4 min
+	int p2_max_grazing = 240;  //default grazing of 4 min
+	int p3_max_grazing = 240;  //default grazing of 4 min
+	int p4_max_grazing = 240;  //default grazing of 4 min
+ 13c:	20 ef       	ldi	r18, 0xF0	; 240
+ 13e:	30 e0       	ldi	r19, 0x00	; 0
+ 140:	3e a3       	std	Y+38, r19	; 0x26
+ 142:	2d a3       	std	Y+37, r18	; 0x25
+	int p4Wr_total_counter = 0;
+	
+	//set maximum grazing and drinking time
+	int p1_max_grazing = 240;  //default grazing of 4 min
+	int p2_max_grazing = 240;  //default grazing of 4 min
+	int p3_max_grazing = 240;  //default grazing of 4 min
+ 144:	80 ef       	ldi	r24, 0xF0	; 240
+ 146:	90 e0       	ldi	r25, 0x00	; 0
+ 148:	9c a3       	std	Y+36, r25	; 0x24
+ 14a:	8b a3       	std	Y+35, r24	; 0x23
+	int p3Wr_total_counter = 0;
+	int p4Wr_total_counter = 0;
+	
+	//set maximum grazing and drinking time
+	int p1_max_grazing = 240;  //default grazing of 4 min
+	int p2_max_grazing = 240;  //default grazing of 4 min
+ 14c:	3a a3       	std	Y+34, r19	; 0x22
+ 14e:	29 a3       	std	Y+33, r18	; 0x21
+	int p2Wr_total_counter = 0;
+	int p3Wr_total_counter = 0;
+	int p4Wr_total_counter = 0;
+	
+	//set maximum grazing and drinking time
+	int p1_max_grazing = 240;  //default grazing of 4 min
+ 150:	98 a3       	std	Y+32, r25	; 0x20
+ 152:	8f 8f       	std	Y+31, r24	; 0x1f
+	int p3Gr_total_counter = 0;
+	int p4Gr_total_counter = 0;
+	int p1Wr_total_counter = 0;
+	int p2Wr_total_counter = 0;
+	int p3Wr_total_counter = 0;
+	int p4Wr_total_counter = 0;
+ 154:	e7 96       	adiw	r28, 0x37	; 55
+ 156:	1f ae       	std	Y+63, r1	; 0x3f
+ 158:	1e ae       	std	Y+62, r1	; 0x3e
+ 15a:	e7 97       	sbiw	r28, 0x37	; 55
+	int p2Gr_total_counter = 0;
+	int p3Gr_total_counter = 0;
+	int p4Gr_total_counter = 0;
+	int p1Wr_total_counter = 0;
+	int p2Wr_total_counter = 0;
+	int p3Wr_total_counter = 0;
+ 15c:	e5 96       	adiw	r28, 0x35	; 53
+ 15e:	1f ae       	std	Y+63, r1	; 0x3f
+ 160:	1e ae       	std	Y+62, r1	; 0x3e
+ 162:	e5 97       	sbiw	r28, 0x35	; 53
+	int p1Gr_total_counter = 0;
+	int p2Gr_total_counter = 0;
+	int p3Gr_total_counter = 0;
+	int p4Gr_total_counter = 0;
+	int p1Wr_total_counter = 0;
+	int p2Wr_total_counter = 0;
+ 164:	e3 96       	adiw	r28, 0x33	; 51
+ 166:	1f ae       	std	Y+63, r1	; 0x3f
+ 168:	1e ae       	std	Y+62, r1	; 0x3e
+ 16a:	e3 97       	sbiw	r28, 0x33	; 51
+	//total grazing and water counters for the paddocks
+	int p1Gr_total_counter = 0;
+	int p2Gr_total_counter = 0;
+	int p3Gr_total_counter = 0;
+	int p4Gr_total_counter = 0;
+	int p1Wr_total_counter = 0;
+ 16c:	e1 96       	adiw	r28, 0x31	; 49
+ 16e:	1f ae       	std	Y+63, r1	; 0x3f
+ 170:	1e ae       	std	Y+62, r1	; 0x3e
+ 172:	e1 97       	sbiw	r28, 0x31	; 49
+
+	//total grazing and water counters for the paddocks
+	int p1Gr_total_counter = 0;
+	int p2Gr_total_counter = 0;
+	int p3Gr_total_counter = 0;
+	int p4Gr_total_counter = 0;
+ 174:	af 96       	adiw	r28, 0x2f	; 47
+ 176:	1f ae       	std	Y+63, r1	; 0x3f
+ 178:	1e ae       	std	Y+62, r1	; 0x3e
+ 17a:	af 97       	sbiw	r28, 0x2f	; 47
+	int p4Wr_counter = 0;
+
+	//total grazing and water counters for the paddocks
+	int p1Gr_total_counter = 0;
+	int p2Gr_total_counter = 0;
+	int p3Gr_total_counter = 0;
+ 17c:	ad 96       	adiw	r28, 0x2d	; 45
+ 17e:	1f ae       	std	Y+63, r1	; 0x3f
+ 180:	1e ae       	std	Y+62, r1	; 0x3e
+ 182:	ad 97       	sbiw	r28, 0x2d	; 45
+	int p3Wr_counter = 0;
+	int p4Wr_counter = 0;
+
+	//total grazing and water counters for the paddocks
+	int p1Gr_total_counter = 0;
+	int p2Gr_total_counter = 0;
+ 184:	ab 96       	adiw	r28, 0x2b	; 43
+ 186:	1f ae       	std	Y+63, r1	; 0x3f
+ 188:	1e ae       	std	Y+62, r1	; 0x3e
+ 18a:	ab 97       	sbiw	r28, 0x2b	; 43
+	int p2Wr_counter = 0;
+	int p3Wr_counter = 0;
+	int p4Wr_counter = 0;
+
+	//total grazing and water counters for the paddocks
+	int p1Gr_total_counter = 0;
+ 18c:	a9 96       	adiw	r28, 0x29	; 41
+ 18e:	1f ae       	std	Y+63, r1	; 0x3f
+ 190:	1e ae       	std	Y+62, r1	; 0x3e
+ 192:	a9 97       	sbiw	r28, 0x29	; 41
+	int p3Gr_counter = 0;
+	int p4Gr_counter = 0;
+	int p1Wr_counter = 0;
+	int p2Wr_counter = 0;
+	int p3Wr_counter = 0;
+	int p4Wr_counter = 0;
+ 194:	a7 96       	adiw	r28, 0x27	; 39
+ 196:	1f ae       	std	Y+63, r1	; 0x3f
+ 198:	1e ae       	std	Y+62, r1	; 0x3e
+ 19a:	a7 97       	sbiw	r28, 0x27	; 39
+	int p2Gr_counter = 0;
+	int p3Gr_counter = 0;
+	int p4Gr_counter = 0;
+	int p1Wr_counter = 0;
+	int p2Wr_counter = 0;
+	int p3Wr_counter = 0;
+ 19c:	a5 96       	adiw	r28, 0x25	; 37
+ 19e:	1f ae       	std	Y+63, r1	; 0x3f
+ 1a0:	1e ae       	std	Y+62, r1	; 0x3e
+ 1a2:	a5 97       	sbiw	r28, 0x25	; 37
+	int p1Gr_counter = 0;
+	int p2Gr_counter = 0;
+	int p3Gr_counter = 0;
+	int p4Gr_counter = 0;
+	int p1Wr_counter = 0;
+	int p2Wr_counter = 0;
+ 1a4:	a3 96       	adiw	r28, 0x23	; 35
+ 1a6:	1f ae       	std	Y+63, r1	; 0x3f
+ 1a8:	1e ae       	std	Y+62, r1	; 0x3e
+ 1aa:	a3 97       	sbiw	r28, 0x23	; 35
+	//grazing and water counters for the paddocks
+	int p1Gr_counter = 0;
+	int p2Gr_counter = 0;
+	int p3Gr_counter = 0;
+	int p4Gr_counter = 0;
+	int p1Wr_counter = 0;
+ 1ac:	a1 96       	adiw	r28, 0x21	; 33
+ 1ae:	1f ae       	std	Y+63, r1	; 0x3f
+ 1b0:	1e ae       	std	Y+62, r1	; 0x3e
+ 1b2:	a1 97       	sbiw	r28, 0x21	; 33
+	
+	//grazing and water counters for the paddocks
+	int p1Gr_counter = 0;
+	int p2Gr_counter = 0;
+	int p3Gr_counter = 0;
+	int p4Gr_counter = 0;
+ 1b4:	6f 96       	adiw	r28, 0x1f	; 31
+ 1b6:	1f ae       	std	Y+63, r1	; 0x3f
+ 1b8:	1e ae       	std	Y+62, r1	; 0x3e
+ 1ba:	6f 97       	sbiw	r28, 0x1f	; 31
+	int p4Wr = 0;
+	
+	//grazing and water counters for the paddocks
+	int p1Gr_counter = 0;
+	int p2Gr_counter = 0;
+	int p3Gr_counter = 0;
+ 1bc:	6d 96       	adiw	r28, 0x1d	; 29
+ 1be:	1f ae       	std	Y+63, r1	; 0x3f
+ 1c0:	1e ae       	std	Y+62, r1	; 0x3e
+ 1c2:	6d 97       	sbiw	r28, 0x1d	; 29
+	int p3Wr = 0;
+	int p4Wr = 0;
+	
+	//grazing and water counters for the paddocks
+	int p1Gr_counter = 0;
+	int p2Gr_counter = 0;
+ 1c4:	6b 96       	adiw	r28, 0x1b	; 27
+ 1c6:	1f ae       	std	Y+63, r1	; 0x3f
+ 1c8:	1e ae       	std	Y+62, r1	; 0x3e
+ 1ca:	6b 97       	sbiw	r28, 0x1b	; 27
+	int p2Wr = 0;
+	int p3Wr = 0;
+	int p4Wr = 0;
+	
+	//grazing and water counters for the paddocks
+	int p1Gr_counter = 0;
+ 1cc:	69 96       	adiw	r28, 0x19	; 25
+ 1ce:	1f ae       	std	Y+63, r1	; 0x3f
+ 1d0:	1e ae       	std	Y+62, r1	; 0x3e
+ 1d2:	69 97       	sbiw	r28, 0x19	; 25
+	int p3Gr = 0;
+	int p4Gr = 0;
+	int p1Wr = 0;
+	int p2Wr = 0;
+	int p3Wr = 0;
+	int p4Wr = 0;
+ 1d4:	1e 8a       	std	Y+22, r1	; 0x16
+ 1d6:	1d 8a       	std	Y+21, r1	; 0x15
+	int p2Gr = 0;
+	int p3Gr = 0;
+	int p4Gr = 0;
+	int p1Wr = 0;
+	int p2Wr = 0;
+	int p3Wr = 0;
+ 1d8:	1c 8a       	std	Y+20, r1	; 0x14
+ 1da:	1b 8a       	std	Y+19, r1	; 0x13
+	int p1Gr = 0;
+	int p2Gr = 0;
+	int p3Gr = 0;
+	int p4Gr = 0;
+	int p1Wr = 0;
+	int p2Wr = 0;
+ 1dc:	1a 8a       	std	Y+18, r1	; 0x12
+ 1de:	19 8a       	std	Y+17, r1	; 0x11
+	//set 0 for counter off and 1 for start counter
+	int p1Gr = 0;
+	int p2Gr = 0;
+	int p3Gr = 0;
+	int p4Gr = 0;
+	int p1Wr = 0;
+ 1e0:	18 8a       	std	Y+16, r1	; 0x10
+ 1e2:	1f 86       	std	Y+15, r1	; 0x0f
+	
+	//set 0 for counter off and 1 for start counter
+	int p1Gr = 0;
+	int p2Gr = 0;
+	int p3Gr = 0;
+	int p4Gr = 0;
+ 1e4:	1e 86       	std	Y+14, r1	; 0x0e
+ 1e6:	1d 86       	std	Y+13, r1	; 0x0d
+
+	
+	//set 0 for counter off and 1 for start counter
+	int p1Gr = 0;
+	int p2Gr = 0;
+	int p3Gr = 0;
+ 1e8:	1c 86       	std	Y+12, r1	; 0x0c
+ 1ea:	1b 86       	std	Y+11, r1	; 0x0b
+	int MAX_LIGHT_TIME = 60; //we remove 5 seconds to handle execution time 60 => 55
+
+	
+	//set 0 for counter off and 1 for start counter
+	int p1Gr = 0;
+	int p2Gr = 0;
+ 1ec:	1a 86       	std	Y+10, r1	; 0x0a
+ 1ee:	19 86       	std	Y+9, r1	; 0x09
+	//maximum red_led light duration
+	int MAX_LIGHT_TIME = 60; //we remove 5 seconds to handle execution time 60 => 55
+
+	
+	//set 0 for counter off and 1 for start counter
+	int p1Gr = 0;
+ 1f0:	18 86       	std	Y+8, r1	; 0x08
+ 1f2:	1f 82       	std	Y+7, r1	; 0x07
+
+	//red LED counters
+	int p1R_LED_counter = 0;
+	int p2R_LED_counter = 0;
+	int p3R_LED_counter = 0;
+	int p4R_LED_counter = 0;
+ 1f4:	67 96       	adiw	r28, 0x17	; 23
+ 1f6:	1f ae       	std	Y+63, r1	; 0x3f
+ 1f8:	1e ae       	std	Y+62, r1	; 0x3e
+ 1fa:	67 97       	sbiw	r28, 0x17	; 23
+	int p4G_LED = 0;
+
+	//red LED counters
+	int p1R_LED_counter = 0;
+	int p2R_LED_counter = 0;
+	int p3R_LED_counter = 0;
+ 1fc:	65 96       	adiw	r28, 0x15	; 21
+ 1fe:	1f ae       	std	Y+63, r1	; 0x3f
+ 200:	1e ae       	std	Y+62, r1	; 0x3e
+ 202:	65 97       	sbiw	r28, 0x15	; 21
+	int p4R_LED = 0;
+	int p4G_LED = 0;
+
+	//red LED counters
+	int p1R_LED_counter = 0;
+	int p2R_LED_counter = 0;
+ 204:	63 96       	adiw	r28, 0x13	; 19
+ 206:	1f ae       	std	Y+63, r1	; 0x3f
+ 208:	1e ae       	std	Y+62, r1	; 0x3e
+ 20a:	63 97       	sbiw	r28, 0x13	; 19
+	int p3G_LED = 0;
+	int p4R_LED = 0;
+	int p4G_LED = 0;
+
+	//red LED counters
+	int p1R_LED_counter = 0;
+ 20c:	61 96       	adiw	r28, 0x11	; 17
+ 20e:	1f ae       	std	Y+63, r1	; 0x3f
+ 210:	1e ae       	std	Y+62, r1	; 0x3e
+ 212:	61 97       	sbiw	r28, 0x11	; 17
+	int p2R_LED = 0;
+	int p2G_LED = 0;
+	int p3R_LED = 0;
+	int p3G_LED = 0;
+	int p4R_LED = 0;
+	int p4G_LED = 0;
+ 214:	1c ae       	std	Y+60, r1	; 0x3c
+ 216:	1b ae       	std	Y+59, r1	; 0x3b
+	int p1G_LED = 0;
+	int p2R_LED = 0;
+	int p2G_LED = 0;
+	int p3R_LED = 0;
+	int p3G_LED = 0;
+	int p4R_LED = 0;
+ 218:	1c 82       	std	Y+4, r1	; 0x04
+ 21a:	1b 82       	std	Y+3, r1	; 0x03
+	int p1R_LED = 0;
+	int p1G_LED = 0;
+	int p2R_LED = 0;
+	int p2G_LED = 0;
+	int p3R_LED = 0;
+	int p3G_LED = 0;
+ 21c:	1a ae       	std	Y+58, r1	; 0x3a
+ 21e:	19 ae       	std	Y+57, r1	; 0x39
+	//SET 0 for off and 1 for on
+	int p1R_LED = 0;
+	int p1G_LED = 0;
+	int p2R_LED = 0;
+	int p2G_LED = 0;
+	int p3R_LED = 0;
+ 220:	e1 2c       	mov	r14, r1
+ 222:	f1 2c       	mov	r15, r1
+	
+	//SET 0 for off and 1 for on
+	int p1R_LED = 0;
+	int p1G_LED = 0;
+	int p2R_LED = 0;
+	int p2G_LED = 0;
+ 224:	18 ae       	std	Y+56, r1	; 0x38
+ 226:	1f aa       	std	Y+55, r1	; 0x37
+	int d4W_counter = 0;
+	
+	//SET 0 for off and 1 for on
+	int p1R_LED = 0;
+	int p1G_LED = 0;
+	int p2R_LED = 0;
+ 228:	00 e0       	ldi	r16, 0x00	; 0
+ 22a:	10 e0       	ldi	r17, 0x00	; 0
+	int d4G_counter = 0;
+	int d4W_counter = 0;
+	
+	//SET 0 for off and 1 for on
+	int p1R_LED = 0;
+	int p1G_LED = 0;
+ 22c:	1e aa       	std	Y+54, r1	; 0x36
+ 22e:	1d aa       	std	Y+53, r1	; 0x35
+	int d3W_counter = 0;
+	int d4G_counter = 0;
+	int d4W_counter = 0;
+	
+	//SET 0 for off and 1 for on
+	int p1R_LED = 0;
+ 230:	c1 2c       	mov	r12, r1
+ 232:	d1 2c       	mov	r13, r1
+	int d2G_counter = 0;
+	int d2W_counter = 0;
+	int d3G_counter = 0;
+	int d3W_counter = 0;
+	int d4G_counter = 0;
+	int d4W_counter = 0;
+ 234:	2f 96       	adiw	r28, 0x0f	; 15
+ 236:	1f ae       	std	Y+63, r1	; 0x3f
+ 238:	1e ae       	std	Y+62, r1	; 0x3e
+ 23a:	2f 97       	sbiw	r28, 0x0f	; 15
+	int d1W_counter = 0;
+	int d2G_counter = 0;
+	int d2W_counter = 0;
+	int d3G_counter = 0;
+	int d3W_counter = 0;
+	int d4G_counter = 0;
+ 23c:	2d 96       	adiw	r28, 0x0d	; 13
+ 23e:	1f ae       	std	Y+63, r1	; 0x3f
+ 240:	1e ae       	std	Y+62, r1	; 0x3e
+ 242:	2d 97       	sbiw	r28, 0x0d	; 13
+
+	int d1W_counter = 0;
+	int d2G_counter = 0;
+	int d2W_counter = 0;
+	int d3G_counter = 0;
+	int d3W_counter = 0;
+ 244:	2b 96       	adiw	r28, 0x0b	; 11
+ 246:	1f ae       	std	Y+63, r1	; 0x3f
+ 248:	1e ae       	std	Y+62, r1	; 0x3e
+ 24a:	2b 97       	sbiw	r28, 0x0b	; 11
+	int d1G_counter = 0;
+
+	int d1W_counter = 0;
+	int d2G_counter = 0;
+	int d2W_counter = 0;
+	int d3G_counter = 0;
+ 24c:	29 96       	adiw	r28, 0x09	; 9
+ 24e:	1f ae       	std	Y+63, r1	; 0x3f
+ 250:	1e ae       	std	Y+62, r1	; 0x3e
+ 252:	29 97       	sbiw	r28, 0x09	; 9
+	//set door counter
+	int d1G_counter = 0;
+
+	int d1W_counter = 0;
+	int d2G_counter = 0;
+	int d2W_counter = 0;
+ 254:	27 96       	adiw	r28, 0x07	; 7
+ 256:	1f ae       	std	Y+63, r1	; 0x3f
+ 258:	1e ae       	std	Y+62, r1	; 0x3e
+ 25a:	27 97       	sbiw	r28, 0x07	; 7
+	
+	//set door counter
+	int d1G_counter = 0;
+
+	int d1W_counter = 0;
+	int d2G_counter = 0;
+ 25c:	25 96       	adiw	r28, 0x05	; 5
+ 25e:	1f ae       	std	Y+63, r1	; 0x3f
+ 260:	1e ae       	std	Y+62, r1	; 0x3e
+ 262:	25 97       	sbiw	r28, 0x05	; 5
+	int d1Gi = 1, d1Wi = 1, d2Gi = 1, d2Wi =1, d3Gi = 1, d3Wi =1, d4Wi = 1, d4Gi =1;
+	
+	//set door counter
+	int d1G_counter = 0;
+
+	int d1W_counter = 0;
+ 264:	23 96       	adiw	r28, 0x03	; 3
+ 266:	1f ae       	std	Y+63, r1	; 0x3f
+ 268:	1e ae       	std	Y+62, r1	; 0x3e
+ 26a:	23 97       	sbiw	r28, 0x03	; 3
+
+	//check is first iteration if yes SET 1 if not set 0
+	int d1Gi = 1, d1Wi = 1, d2Gi = 1, d2Wi =1, d3Gi = 1, d3Wi =1, d4Wi = 1, d4Gi =1;
+	
+	//set door counter
+	int d1G_counter = 0;
+ 26c:	21 96       	adiw	r28, 0x01	; 1
+ 26e:	1f ae       	std	Y+63, r1	; 0x3f
+ 270:	1e ae       	std	Y+62, r1	; 0x3e
+ 272:	21 97       	sbiw	r28, 0x01	; 1
+	int d3W = 0;
+	int d4G = 0;
+	int d4W = 0;
+
+	//check is first iteration if yes SET 1 if not set 0
+	int d1Gi = 1, d1Wi = 1, d2Gi = 1, d2Wi =1, d3Gi = 1, d3Wi =1, d4Wi = 1, d4Gi =1;
+ 274:	21 e0       	ldi	r18, 0x01	; 1
+ 276:	30 e0       	ldi	r19, 0x00	; 0
+ 278:	3c ab       	std	Y+52, r19	; 0x34
+ 27a:	2b ab       	std	Y+51, r18	; 0x33
+ 27c:	81 e0       	ldi	r24, 0x01	; 1
+ 27e:	90 e0       	ldi	r25, 0x00	; 0
+ 280:	9e af       	std	Y+62, r25	; 0x3e
+ 282:	8d af       	std	Y+61, r24	; 0x3d
+ 284:	3a ab       	std	Y+50, r19	; 0x32
+ 286:	29 ab       	std	Y+49, r18	; 0x31
+ 288:	98 ab       	std	Y+48, r25	; 0x30
+ 28a:	8f a7       	std	Y+47, r24	; 0x2f
+ 28c:	3e a7       	std	Y+46, r19	; 0x2e
+ 28e:	2d a7       	std	Y+45, r18	; 0x2d
+ 290:	9c a7       	std	Y+44, r25	; 0x2c
+ 292:	8b a7       	std	Y+43, r24	; 0x2b
+ 294:	3a a7       	std	Y+42, r19	; 0x2a
+ 296:	29 a7       	std	Y+41, r18	; 0x29
+ 298:	98 a7       	std	Y+40, r25	; 0x28
+ 29a:	8f a3       	std	Y+39, r24	; 0x27
+	int d2G = 0;
+	int d2W = 0;
+	int d3G = 0;
+	int d3W = 0;
+	int d4G = 0;
+	int d4W = 0;
+ 29c:	1e 8e       	std	Y+30, r1	; 0x1e
+ 29e:	1d 8e       	std	Y+29, r1	; 0x1d
+	int d1W = 0;
+	int d2G = 0;
+	int d2W = 0;
+	int d3G = 0;
+	int d3W = 0;
+	int d4G = 0;
+ 2a0:	1e 82       	std	Y+6, r1	; 0x06
+ 2a2:	1d 82       	std	Y+5, r1	; 0x05
+	int d1G = 0;
+	int d1W = 0;
+	int d2G = 0;
+	int d2W = 0;
+	int d3G = 0;
+	int d3W = 0;
+ 2a4:	1c 8e       	std	Y+28, r1	; 0x1c
+ 2a6:	1b 8e       	std	Y+27, r1	; 0x1b
+	//set door on/off 
+	int d1G = 0;
+	int d1W = 0;
+	int d2G = 0;
+	int d2W = 0;
+	int d3G = 0;
+ 2a8:	1a 82       	std	Y+2, r1	; 0x02
+ 2aa:	19 82       	std	Y+1, r1	; 0x01
+	
+	//set door on/off 
+	int d1G = 0;
+	int d1W = 0;
+	int d2G = 0;
+	int d2W = 0;
+ 2ac:	1a 8e       	std	Y+26, r1	; 0x1a
+ 2ae:	19 8e       	std	Y+25, r1	; 0x19
+	// int p4_counter = 0;
+	
+	//set door on/off 
+	int d1G = 0;
+	int d1W = 0;
+	int d2G = 0;
+ 2b0:	a1 2c       	mov	r10, r1
+ 2b2:	b1 2c       	mov	r11, r1
+	// int p3_counter = 0;
+	// int p4_counter = 0;
+	
+	//set door on/off 
+	int d1G = 0;
+	int d1W = 0;
+ 2b4:	18 8e       	std	Y+24, r1	; 0x18
+ 2b6:	1f 8a       	std	Y+23, r1	; 0x17
+	// int p2_counter = 0;
+	// int p3_counter = 0;
+	// int p4_counter = 0;
+	
+	//set door on/off 
+	int d1G = 0;
+ 2b8:	81 2c       	mov	r8, r1
+ 2ba:	91 2c       	mov	r9, r1
+			p4R_LED = 1;
+			soundVBuzzer();
+		}
+		while((TIFR0 & 0x01) == 0);
+		TCNT0 = 0x00;
+		TIFR0 = 0x01;
+ 2bc:	66 24       	eor	r6, r6
+ 2be:	63 94       	inc	r6
+    {
+		
+		//display 7 segment display
+		//segShow(p1Gr_total_counter, p2Gr_total_counter,p3Gr_total_counter,p4Gr_total_counter);
+		
+		PORTF = 0b11111110;
+ 2c0:	0f 2e       	mov	r0, r31
+ 2c2:	fe ef       	ldi	r31, 0xFE	; 254
+ 2c4:	7f 2e       	mov	r7, r31
+ 2c6:	f0 2d       	mov	r31, r0
+		if( (PINF & (1<<3)) ==0 ) {
+			d3G = 1;
+			p3R_LED = 1;
+ 2c8:	44 24       	eor	r4, r4
+ 2ca:	43 94       	inc	r4
+ 2cc:	51 2c       	mov	r5, r1
+ 2ce:	85 2d       	mov	r24, r5
+ 2d0:	54 2c       	mov	r5, r4
+ 2d2:	48 2e       	mov	r4, r24
+ 2d4:	15 c0       	rjmp	.+42     	; 0x300 <main+0x1f0>
+				}
+			}
+			if(d4W){
+				d4W_counter++;
+				if(d4W_counter == 40){
+					d4W_counter = 0;
+ 2d6:	2f 96       	adiw	r28, 0x0f	; 15
+ 2d8:	1f ae       	std	Y+63, r1	; 0x3f
+ 2da:	1e ae       	std	Y+62, r1	; 0x3e
+ 2dc:	2f 97       	sbiw	r28, 0x0f	; 15
+					d4W = 0;
+					d4Wi = 1;
+ 2de:	91 e0       	ldi	r25, 0x01	; 1
+ 2e0:	9d af       	std	Y+61, r25	; 0x3d
+ 2e2:	1e ae       	std	Y+62, r1	; 0x3e
+			}
+			if(d4W){
+				d4W_counter++;
+				if(d4W_counter == 40){
+					d4W_counter = 0;
+					d4W = 0;
+ 2e4:	1d 8e       	std	Y+29, r1	; 0x1d
+ 2e6:	1e 8e       	std	Y+30, r1	; 0x1e
+ 2e8:	0b c0       	rjmp	.+22     	; 0x300 <main+0x1f0>
+						//start water counter
+						p4Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p4Gr = 1;
+						p4Wr = 0;
+ 2ea:	1d 8a       	std	Y+21, r1	; 0x15
+ 2ec:	1e 8a       	std	Y+22, r1	; 0x16
+						d4Wi = 0;
+						//start water counter
+						p4Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p4Gr = 1;
+ 2ee:	21 e0       	ldi	r18, 0x01	; 1
+ 2f0:	2d 87       	std	Y+13, r18	; 0x0d
+ 2f2:	1e 86       	std	Y+14, r1	; 0x0e
+ 2f4:	05 c0       	rjmp	.+10     	; 0x300 <main+0x1f0>
+						p4Wr = 0;
+ 2f6:	1d 8a       	std	Y+21, r1	; 0x15
+ 2f8:	1e 8a       	std	Y+22, r1	; 0x16
+						d4Wi = 0;
+						//start water counter
+						p4Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p4Gr = 1;
+ 2fa:	31 e0       	ldi	r19, 0x01	; 1
+ 2fc:	3d 87       	std	Y+13, r19	; 0x0d
+ 2fe:	1e 86       	std	Y+14, r1	; 0x0e
+	// int p2_counter = 0;
+	// int p3_counter = 0;
+	// int p4_counter = 0;
+	
+	//set door on/off 
+	int d1G = 0;
+ 300:	0f 2e       	mov	r0, r31
+ 302:	f8 ee       	ldi	r31, 0xE8	; 232
+ 304:	2f 2e       	mov	r2, r31
+ 306:	f3 e0       	ldi	r31, 0x03	; 3
+ 308:	3f 2e       	mov	r3, r31
+ 30a:	f0 2d       	mov	r31, r0
+    {
+		
+		//display 7 segment display
+		//segShow(p1Gr_total_counter, p2Gr_total_counter,p3Gr_total_counter,p4Gr_total_counter);
+		
+		PORTF = 0b11111110;
+ 30c:	71 ba       	out	0x11, r7	; 17
+		if( (PINF & (1<<3)) ==0 ) {
+ 30e:	7b 99       	sbic	0x0f, 3	; 15
+ 310:	05 c0       	rjmp	.+10     	; 0x31c <main+0x20c>
+			d3G = 1;
+			p3R_LED = 1;
+			soundVBuzzer();
+ 312:	f3 de       	rcall	.-538    	; 0xfa <soundVBuzzer>
+		//segShow(p1Gr_total_counter, p2Gr_total_counter,p3Gr_total_counter,p4Gr_total_counter);
+		
+		PORTF = 0b11111110;
+		if( (PINF & (1<<3)) ==0 ) {
+			d3G = 1;
+			p3R_LED = 1;
+ 314:	e5 2c       	mov	r14, r5
+ 316:	f4 2c       	mov	r15, r4
+		//display 7 segment display
+		//segShow(p1Gr_total_counter, p2Gr_total_counter,p3Gr_total_counter,p4Gr_total_counter);
+		
+		PORTF = 0b11111110;
+		if( (PINF & (1<<3)) ==0 ) {
+			d3G = 1;
+ 318:	59 82       	std	Y+1, r5	; 0x01
+ 31a:	4a 82       	std	Y+2, r4	; 0x02
+			p3R_LED = 1;
+			soundVBuzzer();
+		}
+		
+		PORTF = 0b11111101;
+ 31c:	8d ef       	ldi	r24, 0xFD	; 253
+ 31e:	81 bb       	out	0x11, r24	; 17
+		if( (PINF & (1<<3)) ==0 ) {
+ 320:	7b 99       	sbic	0x0f, 3	; 15
+			d2G = 1;
+			p2R_LED = 1;
+			soundVBuzzer();
+ 322:	06 c0       	rjmp	.+12     	; 0x330 <main+0x220>
+ 324:	ea de       	rcall	.-556    	; 0xfa <soundVBuzzer>
+		}
+		
+		PORTF = 0b11111101;
+		if( (PINF & (1<<3)) ==0 ) {
+			d2G = 1;
+			p2R_LED = 1;
+ 326:	05 2d       	mov	r16, r5
+ 328:	14 2d       	mov	r17, r4
+			soundVBuzzer();
+		}
+		
+		PORTF = 0b11111101;
+		if( (PINF & (1<<3)) ==0 ) {
+			d2G = 1;
+ 32a:	a5 2c       	mov	r10, r5
+ 32c:	b4 2c       	mov	r11, r4
+ 32e:	13 c0       	rjmp	.+38     	; 0x356 <main+0x246>
+			p2R_LED = 1;
+			soundVBuzzer();
+		}
+		else if((PINF & (1<<6)) == 0){
+ 330:	7e 99       	sbic	0x0f, 6	; 15
+			d2G = 1, d3G =1, d1G =1, d4G =1;
+			p2R_LED = 1, p3R_LED = 1, p1R_LED = 1, p4R_LED = 1; 
+			soundVBuzzer();
+ 332:	11 c0       	rjmp	.+34     	; 0x356 <main+0x246>
+ 334:	e2 de       	rcall	.-572    	; 0xfa <soundVBuzzer>
+			p2R_LED = 1;
+			soundVBuzzer();
+		}
+		else if((PINF & (1<<6)) == 0){
+			d2G = 1, d3G =1, d1G =1, d4G =1;
+			p2R_LED = 1, p3R_LED = 1, p1R_LED = 1, p4R_LED = 1; 
+ 336:	5b 82       	std	Y+3, r5	; 0x03
+ 338:	4c 82       	std	Y+4, r4	; 0x04
+ 33a:	e5 2c       	mov	r14, r5
+ 33c:	f4 2c       	mov	r15, r4
+ 33e:	05 2d       	mov	r16, r5
+ 340:	14 2d       	mov	r17, r4
+ 342:	c5 2c       	mov	r12, r5
+ 344:	d4 2c       	mov	r13, r4
+			d2G = 1;
+			p2R_LED = 1;
+			soundVBuzzer();
+		}
+		else if((PINF & (1<<6)) == 0){
+			d2G = 1, d3G =1, d1G =1, d4G =1;
+ 346:	5d 82       	std	Y+5, r5	; 0x05
+ 348:	4e 82       	std	Y+6, r4	; 0x06
+ 34a:	59 82       	std	Y+1, r5	; 0x01
+ 34c:	4a 82       	std	Y+2, r4	; 0x02
+ 34e:	a5 2c       	mov	r10, r5
+ 350:	b4 2c       	mov	r11, r4
+ 352:	85 2c       	mov	r8, r5
+ 354:	94 2c       	mov	r9, r4
+			p2R_LED = 1, p3R_LED = 1, p1R_LED = 1, p4R_LED = 1; 
+			soundVBuzzer();
+		}
+	
+		PORTF = 0b11111011;
+ 356:	9b ef       	ldi	r25, 0xFB	; 251
+		if( (PINF & (1<<3)) ==0 ) {
+ 358:	91 bb       	out	0x11, r25	; 17
+ 35a:	7b 99       	sbic	0x0f, 3	; 15
+			d1G = 1;
+			p1R_LED = 1; 
+			soundVBuzzer();
+ 35c:	06 c0       	rjmp	.+12     	; 0x36a <main+0x25a>
+ 35e:	cd de       	rcall	.-614    	; 0xfa <soundVBuzzer>
+		}
+	
+		PORTF = 0b11111011;
+		if( (PINF & (1<<3)) ==0 ) {
+			d1G = 1;
+			p1R_LED = 1; 
+ 360:	c5 2c       	mov	r12, r5
+ 362:	d4 2c       	mov	r13, r4
+			soundVBuzzer();
+		}
+	
+		PORTF = 0b11111011;
+		if( (PINF & (1<<3)) ==0 ) {
+			d1G = 1;
+ 364:	85 2c       	mov	r8, r5
+ 366:	94 2c       	mov	r9, r4
+			p1R_LED = 1; 
+			soundVBuzzer();
+			
+		}
+		else if( (PINF & (1<<4)) ==0 ) {
+ 368:	07 c0       	rjmp	.+14     	; 0x378 <main+0x268>
+ 36a:	7c 99       	sbic	0x0f, 4	; 15
+			d4G = 1;
+			p4R_LED = 1;
+			soundVBuzzer();
+ 36c:	05 c0       	rjmp	.+10     	; 0x378 <main+0x268>
+ 36e:	c5 de       	rcall	.-630    	; 0xfa <soundVBuzzer>
+			soundVBuzzer();
+			
+		}
+		else if( (PINF & (1<<4)) ==0 ) {
+			d4G = 1;
+			p4R_LED = 1;
+ 370:	5b 82       	std	Y+3, r5	; 0x03
+ 372:	4c 82       	std	Y+4, r4	; 0x04
+			p1R_LED = 1; 
+			soundVBuzzer();
+			
+		}
+		else if( (PINF & (1<<4)) ==0 ) {
+			d4G = 1;
+ 374:	5d 82       	std	Y+5, r5	; 0x05
+ 376:	4e 82       	std	Y+6, r4	; 0x06
+			p4R_LED = 1;
+			soundVBuzzer();
+		}
+		while((TIFR0 & 0x01) == 0);
+ 378:	a8 9b       	sbis	0x15, 0	; 21
+ 37a:	fe cf       	rjmp	.-4      	; 0x378 <main+0x268>
+		TCNT0 = 0x00;
+ 37c:	16 bc       	out	0x26, r1	; 38
+		TIFR0 = 0x01;
+ 37e:	65 ba       	out	0x15, r6	; 21
+ 380:	21 e0       	ldi	r18, 0x01	; 1
+ 382:	22 1a       	sub	r2, r18
+		timerOverflowCount++;
+		if(timerOverflowCount >= 1000){
+ 384:	31 08       	sbc	r3, r1
+ 386:	09 f0       	breq	.+2      	; 0x38a <main+0x27a>
+			timerOverflowCount = 0;
+			//CONTROLL EVERY SECOND DELAY
+			stopvBuzzer(); //STOP BUZZER
+ 388:	c1 cf       	rjmp	.-126    	; 0x30c <main+0x1fc>
+ 38a:	bd de       	rcall	.-646    	; 0x106 <stopvBuzzer>
+
+			//check if red light is lighting to increment counter
+			if(p1R_LED){
+ 38c:	c1 14       	cp	r12, r1
+ 38e:	d1 04       	cpc	r13, r1
+ 390:	b9 f0       	breq	.+46     	; 0x3c0 <main+0x2b0>
+				PORTB ^= (1 << PB4);
+ 392:	95 b1       	in	r25, 0x05	; 5
+ 394:	80 e1       	ldi	r24, 0x10	; 16
+ 396:	89 27       	eor	r24, r25
+ 398:	85 b9       	out	0x05, r24	; 5
+				p1R_LED_counter++;
+ 39a:	61 96       	adiw	r28, 0x11	; 17
+ 39c:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 39e:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 3a0:	61 97       	sbiw	r28, 0x11	; 17
+ 3a2:	01 96       	adiw	r24, 0x01	; 1
+ 3a4:	61 96       	adiw	r28, 0x11	; 17
+ 3a6:	9f af       	std	Y+63, r25	; 0x3f
+ 3a8:	8e af       	std	Y+62, r24	; 0x3e
+ 3aa:	61 97       	sbiw	r28, 0x11	; 17
+				if(p1R_LED_counter == MAX_LIGHT_TIME){
+ 3ac:	cc 97       	sbiw	r24, 0x3c	; 60
+ 3ae:	41 f4       	brne	.+16     	; 0x3c0 <main+0x2b0>
+					p1R_LED_counter = 0;
+					p1R_LED = 0; //set red light off
+					PORTB &= (0<<4);
+ 3b0:	85 b1       	in	r24, 0x05	; 5
+ 3b2:	15 b8       	out	0x05, r1	; 5
+			//check if red light is lighting to increment counter
+			if(p1R_LED){
+				PORTB ^= (1 << PB4);
+				p1R_LED_counter++;
+				if(p1R_LED_counter == MAX_LIGHT_TIME){
+					p1R_LED_counter = 0;
+ 3b4:	61 96       	adiw	r28, 0x11	; 17
+ 3b6:	1f ae       	std	Y+63, r1	; 0x3f
+ 3b8:	1e ae       	std	Y+62, r1	; 0x3e
+ 3ba:	61 97       	sbiw	r28, 0x11	; 17
+					p1R_LED = 0; //set red light off
+ 3bc:	c1 2c       	mov	r12, r1
+ 3be:	d1 2c       	mov	r13, r1
+					PORTB &= (0<<4);
+
+				}
+			}
+			if(p2R_LED){
+ 3c0:	01 15       	cp	r16, r1
+ 3c2:	11 05       	cpc	r17, r1
+ 3c4:	c9 f0       	breq	.+50     	; 0x3f8 <main+0x2e8>
+				PORTB ^= (1 << PB5);
+ 3c6:	95 b1       	in	r25, 0x05	; 5
+ 3c8:	80 e2       	ldi	r24, 0x20	; 32
+ 3ca:	89 27       	eor	r24, r25
+ 3cc:	85 b9       	out	0x05, r24	; 5
+				p2R_LED_counter++;
+ 3ce:	63 96       	adiw	r28, 0x13	; 19
+ 3d0:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 3d2:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 3d4:	63 97       	sbiw	r28, 0x13	; 19
+ 3d6:	2f 5f       	subi	r18, 0xFF	; 255
+ 3d8:	3f 4f       	sbci	r19, 0xFF	; 255
+ 3da:	63 96       	adiw	r28, 0x13	; 19
+ 3dc:	3f af       	std	Y+63, r19	; 0x3f
+ 3de:	2e af       	std	Y+62, r18	; 0x3e
+ 3e0:	63 97       	sbiw	r28, 0x13	; 19
+				if(p2R_LED_counter == MAX_LIGHT_TIME){
+ 3e2:	2c 33       	cpi	r18, 0x3C	; 60
+ 3e4:	31 05       	cpc	r19, r1
+ 3e6:	41 f4       	brne	.+16     	; 0x3f8 <main+0x2e8>
+					p2R_LED_counter = 0;
+					p2R_LED = 0; //set red light off
+					PORTB &= (0<<5);
+ 3e8:	85 b1       	in	r24, 0x05	; 5
+ 3ea:	15 b8       	out	0x05, r1	; 5
+			}
+			if(p2R_LED){
+				PORTB ^= (1 << PB5);
+				p2R_LED_counter++;
+				if(p2R_LED_counter == MAX_LIGHT_TIME){
+					p2R_LED_counter = 0;
+ 3ec:	63 96       	adiw	r28, 0x13	; 19
+ 3ee:	1f ae       	std	Y+63, r1	; 0x3f
+ 3f0:	1e ae       	std	Y+62, r1	; 0x3e
+ 3f2:	63 97       	sbiw	r28, 0x13	; 19
+					p2R_LED = 0; //set red light off
+ 3f4:	00 e0       	ldi	r16, 0x00	; 0
+ 3f6:	10 e0       	ldi	r17, 0x00	; 0
+					PORTB &= (0<<5);
+
+				}
+			}
+			if(p3R_LED){
+ 3f8:	e1 14       	cp	r14, r1
+ 3fa:	f1 04       	cpc	r15, r1
+ 3fc:	b9 f0       	breq	.+46     	; 0x42c <__LOCK_REGION_LENGTH__+0x2c>
+				PORTB ^= (1 << PB6);
+ 3fe:	95 b1       	in	r25, 0x05	; 5
+ 400:	80 e4       	ldi	r24, 0x40	; 64
+ 402:	89 27       	eor	r24, r25
+ 404:	85 b9       	out	0x05, r24	; 5
+				p3R_LED_counter++;
+ 406:	65 96       	adiw	r28, 0x15	; 21
+ 408:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 40a:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 40c:	65 97       	sbiw	r28, 0x15	; 21
+ 40e:	01 96       	adiw	r24, 0x01	; 1
+ 410:	65 96       	adiw	r28, 0x15	; 21
+ 412:	9f af       	std	Y+63, r25	; 0x3f
+ 414:	8e af       	std	Y+62, r24	; 0x3e
+ 416:	65 97       	sbiw	r28, 0x15	; 21
+				if(p3R_LED_counter == MAX_LIGHT_TIME){
+ 418:	cc 97       	sbiw	r24, 0x3c	; 60
+ 41a:	41 f4       	brne	.+16     	; 0x42c <__LOCK_REGION_LENGTH__+0x2c>
+					p3R_LED_counter = 0;
+					p3R_LED = 0; //set red light off
+					PORTB &= (0<<6);
+ 41c:	85 b1       	in	r24, 0x05	; 5
+ 41e:	15 b8       	out	0x05, r1	; 5
+			}
+			if(p3R_LED){
+				PORTB ^= (1 << PB6);
+				p3R_LED_counter++;
+				if(p3R_LED_counter == MAX_LIGHT_TIME){
+					p3R_LED_counter = 0;
+ 420:	65 96       	adiw	r28, 0x15	; 21
+ 422:	1f ae       	std	Y+63, r1	; 0x3f
+ 424:	1e ae       	std	Y+62, r1	; 0x3e
+ 426:	65 97       	sbiw	r28, 0x15	; 21
+					p3R_LED = 0; //set red light off
+ 428:	e1 2c       	mov	r14, r1
+ 42a:	f1 2c       	mov	r15, r1
+					PORTB &= (0<<6);
+				}
+			}
+			if(p4R_LED){
+ 42c:	2b 81       	ldd	r18, Y+3	; 0x03
+ 42e:	3c 81       	ldd	r19, Y+4	; 0x04
+ 430:	23 2b       	or	r18, r19
+ 432:	b1 f0       	breq	.+44     	; 0x460 <__LOCK_REGION_LENGTH__+0x60>
+				PORTB ^= (1 << PB7);
+ 434:	85 b1       	in	r24, 0x05	; 5
+ 436:	80 58       	subi	r24, 0x80	; 128
+ 438:	85 b9       	out	0x05, r24	; 5
+				p4R_LED_counter++;
+ 43a:	67 96       	adiw	r28, 0x17	; 23
+ 43c:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 43e:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 440:	67 97       	sbiw	r28, 0x17	; 23
+ 442:	01 96       	adiw	r24, 0x01	; 1
+ 444:	67 96       	adiw	r28, 0x17	; 23
+ 446:	9f af       	std	Y+63, r25	; 0x3f
+ 448:	8e af       	std	Y+62, r24	; 0x3e
+ 44a:	67 97       	sbiw	r28, 0x17	; 23
+				if(p4R_LED_counter == MAX_LIGHT_TIME){
+ 44c:	cc 97       	sbiw	r24, 0x3c	; 60
+ 44e:	41 f4       	brne	.+16     	; 0x460 <__LOCK_REGION_LENGTH__+0x60>
+					p4R_LED_counter = 0;
+					p4R_LED = 0; //set red light off
+					PORTB &= (0<<7);
+ 450:	85 b1       	in	r24, 0x05	; 5
+ 452:	15 b8       	out	0x05, r1	; 5
+			}
+			if(p4R_LED){
+				PORTB ^= (1 << PB7);
+				p4R_LED_counter++;
+				if(p4R_LED_counter == MAX_LIGHT_TIME){
+					p4R_LED_counter = 0;
+ 454:	67 96       	adiw	r28, 0x17	; 23
+ 456:	1f ae       	std	Y+63, r1	; 0x3f
+ 458:	1e ae       	std	Y+62, r1	; 0x3e
+ 45a:	67 97       	sbiw	r28, 0x17	; 23
+					p4R_LED = 0; //set red light off
+ 45c:	1b 82       	std	Y+3, r1	; 0x03
+ 45e:	1c 82       	std	Y+4, r1	; 0x04
+
+				}
+			}
+			
+			//check if grazing or water counters are set to start counting
+			if(p1Gr){
+ 460:	2f 81       	ldd	r18, Y+7	; 0x07
+ 462:	38 85       	ldd	r19, Y+8	; 0x08
+ 464:	23 2b       	or	r18, r19
+ 466:	b9 f1       	breq	.+110    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				if(!p1G_LED)
+ 468:	8d a9       	ldd	r24, Y+53	; 0x35
+ 46a:	9e a9       	ldd	r25, Y+54	; 0x36
+ 46c:	89 2b       	or	r24, r25
+ 46e:	19 f4       	brne	.+6      	; 0x476 <__LOCK_REGION_LENGTH__+0x76>
+					p1G_LED = 1; //set green led back on
+ 470:	91 e0       	ldi	r25, 0x01	; 1
+ 472:	9d ab       	std	Y+53, r25	; 0x35
+ 474:	1e aa       	std	Y+54, r1	; 0x36
+					PORTB |= (1<<0);
+ 476:	28 9a       	sbi	0x05, 0	; 5
+				p1Gr_counter++;
+ 478:	69 96       	adiw	r28, 0x19	; 25
+ 47a:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 47c:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 47e:	69 97       	sbiw	r28, 0x19	; 25
+ 480:	2f 5f       	subi	r18, 0xFF	; 255
+ 482:	3f 4f       	sbci	r19, 0xFF	; 255
+ 484:	69 96       	adiw	r28, 0x19	; 25
+ 486:	3f af       	std	Y+63, r19	; 0x3f
+ 488:	2e af       	std	Y+62, r18	; 0x3e
+ 48a:	69 97       	sbiw	r28, 0x19	; 25
+				p1Gr_total_counter++;
+ 48c:	a9 96       	adiw	r28, 0x29	; 41
+ 48e:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 490:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 492:	a9 97       	sbiw	r28, 0x29	; 41
+ 494:	01 96       	adiw	r24, 0x01	; 1
+ 496:	a9 96       	adiw	r28, 0x29	; 41
+ 498:	9f af       	std	Y+63, r25	; 0x3f
+ 49a:	8e af       	std	Y+62, r24	; 0x3e
+ 49c:	a9 97       	sbiw	r28, 0x29	; 41
+				if(p1Gr_counter == p1_max_grazing){
+ 49e:	8f 8d       	ldd	r24, Y+31	; 0x1f
+ 4a0:	98 a1       	ldd	r25, Y+32	; 0x20
+ 4a2:	82 17       	cp	r24, r18
+ 4a4:	93 07       	cpc	r25, r19
+ 4a6:	b9 f4       	brne	.+46     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+					p1Gr_counter = 0;
+					p1Gr = 0;
+					if(p1_max_grazing == 180){
+ 4a8:	84 3b       	cpi	r24, 0xB4	; 180
+ 4aa:	91 05       	cpc	r25, r1
+ 4ac:	39 f0       	breq	.+14     	; 0x4bc <__LOCK_REGION_LENGTH__+0xbc>
+						d1G = 1;
+					}else{
+						d1W = 1; //open water door
+						p1_max_grazing = 240; //reset to default time
+ 4ae:	90 ef       	ldi	r25, 0xF0	; 240
+ 4b0:	9f 8f       	std	Y+31, r25	; 0x1f
+ 4b2:	18 a2       	std	Y+32, r1	; 0x20
+					p1Gr_counter = 0;
+					p1Gr = 0;
+					if(p1_max_grazing == 180){
+						d1G = 1;
+					}else{
+						d1W = 1; //open water door
+ 4b4:	21 e0       	ldi	r18, 0x01	; 1
+ 4b6:	2f 8b       	std	Y+23, r18	; 0x17
+ 4b8:	18 8e       	std	Y+24, r1	; 0x18
+				p1Gr_total_counter++;
+				if(p1Gr_counter == p1_max_grazing){
+					p1Gr_counter = 0;
+					p1Gr = 0;
+					if(p1_max_grazing == 180){
+						d1G = 1;
+ 4ba:	03 c0       	rjmp	.+6      	; 0x4c2 <__LOCK_REGION_LENGTH__+0xc2>
+ 4bc:	88 24       	eor	r8, r8
+ 4be:	83 94       	inc	r8
+					}else{
+						d1W = 1; //open water door
+						p1_max_grazing = 240; //reset to default time
+					}
+					p1R_LED = 1; 
+					soundVBuzzer();
+ 4c0:	91 2c       	mov	r9, r1
+ 4c2:	1b de       	rcall	.-970    	; 0xfa <soundVBuzzer>
+					p1G_LED = 1; //set green led back on
+					PORTB |= (1<<0);
+				p1Gr_counter++;
+				p1Gr_total_counter++;
+				if(p1Gr_counter == p1_max_grazing){
+					p1Gr_counter = 0;
+ 4c4:	69 96       	adiw	r28, 0x19	; 25
+ 4c6:	1f ae       	std	Y+63, r1	; 0x3f
+ 4c8:	1e ae       	std	Y+62, r1	; 0x3e
+ 4ca:	69 97       	sbiw	r28, 0x19	; 25
+					p1Gr = 0;
+ 4cc:	1f 82       	std	Y+7, r1	; 0x07
+ 4ce:	18 86       	std	Y+8, r1	; 0x08
+						d1G = 1;
+					}else{
+						d1W = 1; //open water door
+						p1_max_grazing = 240; //reset to default time
+					}
+					p1R_LED = 1; 
+ 4d0:	cc 24       	eor	r12, r12
+ 4d2:	c3 94       	inc	r12
+ 4d4:	d1 2c       	mov	r13, r1
+					soundVBuzzer();
+				}
+			}
+			if(p2Gr){
+ 4d6:	89 85       	ldd	r24, Y+9	; 0x09
+ 4d8:	9a 85       	ldd	r25, Y+10	; 0x0a
+ 4da:	89 2b       	or	r24, r25
+ 4dc:	b1 f1       	breq	.+108    	; 0x54a <__LOCK_REGION_LENGTH__+0x14a>
+				if(!p2G_LED)
+ 4de:	2f a9       	ldd	r18, Y+55	; 0x37
+ 4e0:	38 ad       	ldd	r19, Y+56	; 0x38
+ 4e2:	23 2b       	or	r18, r19
+ 4e4:	19 f4       	brne	.+6      	; 0x4ec <__LOCK_REGION_LENGTH__+0xec>
+					p2G_LED = 1; //set green led back on
+ 4e6:	31 e0       	ldi	r19, 0x01	; 1
+ 4e8:	3f ab       	std	Y+55, r19	; 0x37
+ 4ea:	18 ae       	std	Y+56, r1	; 0x38
+					PORTB |= (1<<1);
+ 4ec:	29 9a       	sbi	0x05, 1	; 5
+				p2Gr_counter++;
+ 4ee:	6b 96       	adiw	r28, 0x1b	; 27
+ 4f0:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 4f2:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 4f4:	6b 97       	sbiw	r28, 0x1b	; 27
+ 4f6:	01 96       	adiw	r24, 0x01	; 1
+ 4f8:	6b 96       	adiw	r28, 0x1b	; 27
+ 4fa:	9f af       	std	Y+63, r25	; 0x3f
+ 4fc:	8e af       	std	Y+62, r24	; 0x3e
+ 4fe:	6b 97       	sbiw	r28, 0x1b	; 27
+				p2Gr_total_counter++;
+ 500:	ab 96       	adiw	r28, 0x2b	; 43
+ 502:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 504:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 506:	ab 97       	sbiw	r28, 0x2b	; 43
+ 508:	2f 5f       	subi	r18, 0xFF	; 255
+ 50a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 50c:	ab 96       	adiw	r28, 0x2b	; 43
+ 50e:	3f af       	std	Y+63, r19	; 0x3f
+ 510:	2e af       	std	Y+62, r18	; 0x3e
+ 512:	ab 97       	sbiw	r28, 0x2b	; 43
+				if(p2Gr_counter == p2_max_grazing){
+ 514:	29 a1       	ldd	r18, Y+33	; 0x21
+ 516:	3a a1       	ldd	r19, Y+34	; 0x22
+ 518:	28 17       	cp	r18, r24
+ 51a:	39 07       	cpc	r19, r25
+ 51c:	b1 f4       	brne	.+44     	; 0x54a <__LOCK_REGION_LENGTH__+0x14a>
+					p2Gr_counter = 0;
+					p2Gr = 0;
+					if(p2_max_grazing == 180){
+ 51e:	24 3b       	cpi	r18, 0xB4	; 180
+ 520:	31 05       	cpc	r19, r1
+ 522:	39 f0       	breq	.+14     	; 0x532 <__LOCK_REGION_LENGTH__+0x132>
+						d2G = 1;
+					}else{
+						d2W = 1; //open water door
+						p2_max_grazing = 240; //reset to default time
+ 524:	30 ef       	ldi	r19, 0xF0	; 240
+ 526:	39 a3       	std	Y+33, r19	; 0x21
+ 528:	1a a2       	std	Y+34, r1	; 0x22
+					p2Gr_counter = 0;
+					p2Gr = 0;
+					if(p2_max_grazing == 180){
+						d2G = 1;
+					}else{
+						d2W = 1; //open water door
+ 52a:	81 e0       	ldi	r24, 0x01	; 1
+ 52c:	89 8f       	std	Y+25, r24	; 0x19
+ 52e:	1a 8e       	std	Y+26, r1	; 0x1a
+				p2Gr_total_counter++;
+				if(p2Gr_counter == p2_max_grazing){
+					p2Gr_counter = 0;
+					p2Gr = 0;
+					if(p2_max_grazing == 180){
+						d2G = 1;
+ 530:	03 c0       	rjmp	.+6      	; 0x538 <__LOCK_REGION_LENGTH__+0x138>
+ 532:	aa 24       	eor	r10, r10
+ 534:	a3 94       	inc	r10
+					}else{
+						d2W = 1; //open water door
+						p2_max_grazing = 240; //reset to default time
+					}
+					p2R_LED = 1; 
+					soundVBuzzer();
+ 536:	b1 2c       	mov	r11, r1
+ 538:	e0 dd       	rcall	.-1088   	; 0xfa <soundVBuzzer>
+					p2G_LED = 1; //set green led back on
+					PORTB |= (1<<1);
+				p2Gr_counter++;
+				p2Gr_total_counter++;
+				if(p2Gr_counter == p2_max_grazing){
+					p2Gr_counter = 0;
+ 53a:	6b 96       	adiw	r28, 0x1b	; 27
+ 53c:	1f ae       	std	Y+63, r1	; 0x3f
+ 53e:	1e ae       	std	Y+62, r1	; 0x3e
+ 540:	6b 97       	sbiw	r28, 0x1b	; 27
+					p2Gr = 0;
+ 542:	19 86       	std	Y+9, r1	; 0x09
+ 544:	1a 86       	std	Y+10, r1	; 0x0a
+						d2G = 1;
+					}else{
+						d2W = 1; //open water door
+						p2_max_grazing = 240; //reset to default time
+					}
+					p2R_LED = 1; 
+ 546:	01 e0       	ldi	r16, 0x01	; 1
+ 548:	10 e0       	ldi	r17, 0x00	; 0
+					soundVBuzzer();
+				}
+			}
+			if(p3Gr){
+ 54a:	2b 85       	ldd	r18, Y+11	; 0x0b
+ 54c:	3c 85       	ldd	r19, Y+12	; 0x0c
+ 54e:	23 2b       	or	r18, r19
+ 550:	b9 f1       	breq	.+110    	; 0x5c0 <__LOCK_REGION_LENGTH__+0x1c0>
+				if(!p3G_LED)
+ 552:	89 ad       	ldd	r24, Y+57	; 0x39
+ 554:	9a ad       	ldd	r25, Y+58	; 0x3a
+ 556:	89 2b       	or	r24, r25
+ 558:	19 f4       	brne	.+6      	; 0x560 <__LOCK_REGION_LENGTH__+0x160>
+					p3G_LED = 1; //set green led back on
+ 55a:	91 e0       	ldi	r25, 0x01	; 1
+ 55c:	99 af       	std	Y+57, r25	; 0x39
+ 55e:	1a ae       	std	Y+58, r1	; 0x3a
+					PORTB |= (1<<2);
+ 560:	2a 9a       	sbi	0x05, 2	; 5
+				p3Gr_counter++;
+ 562:	6d 96       	adiw	r28, 0x1d	; 29
+ 564:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 566:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 568:	6d 97       	sbiw	r28, 0x1d	; 29
+ 56a:	2f 5f       	subi	r18, 0xFF	; 255
+ 56c:	3f 4f       	sbci	r19, 0xFF	; 255
+ 56e:	6d 96       	adiw	r28, 0x1d	; 29
+ 570:	3f af       	std	Y+63, r19	; 0x3f
+ 572:	2e af       	std	Y+62, r18	; 0x3e
+ 574:	6d 97       	sbiw	r28, 0x1d	; 29
+				p3Gr_total_counter++;
+ 576:	ad 96       	adiw	r28, 0x2d	; 45
+ 578:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 57a:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 57c:	ad 97       	sbiw	r28, 0x2d	; 45
+ 57e:	01 96       	adiw	r24, 0x01	; 1
+ 580:	ad 96       	adiw	r28, 0x2d	; 45
+ 582:	9f af       	std	Y+63, r25	; 0x3f
+ 584:	8e af       	std	Y+62, r24	; 0x3e
+ 586:	ad 97       	sbiw	r28, 0x2d	; 45
+				if(p3Gr_counter == p3_max_grazing){
+ 588:	8b a1       	ldd	r24, Y+35	; 0x23
+ 58a:	9c a1       	ldd	r25, Y+36	; 0x24
+ 58c:	82 17       	cp	r24, r18
+ 58e:	93 07       	cpc	r25, r19
+ 590:	b9 f4       	brne	.+46     	; 0x5c0 <__LOCK_REGION_LENGTH__+0x1c0>
+					p3Gr_counter = 0;
+					p3Gr = 0;
+					if(p3_max_grazing == 180){
+ 592:	84 3b       	cpi	r24, 0xB4	; 180
+ 594:	91 05       	cpc	r25, r1
+ 596:	39 f0       	breq	.+14     	; 0x5a6 <__LOCK_REGION_LENGTH__+0x1a6>
+						d3G = 1;
+					}else{
+						d3W = 1; //open water door
+						p3_max_grazing = 240; //reset to default time
+ 598:	90 ef       	ldi	r25, 0xF0	; 240
+ 59a:	9b a3       	std	Y+35, r25	; 0x23
+					p3Gr_counter = 0;
+					p3Gr = 0;
+					if(p3_max_grazing == 180){
+						d3G = 1;
+					}else{
+						d3W = 1; //open water door
+ 59c:	1c a2       	std	Y+36, r1	; 0x24
+ 59e:	21 e0       	ldi	r18, 0x01	; 1
+ 5a0:	2b 8f       	std	Y+27, r18	; 0x1b
+ 5a2:	1c 8e       	std	Y+28, r1	; 0x1c
+				p3Gr_total_counter++;
+				if(p3Gr_counter == p3_max_grazing){
+					p3Gr_counter = 0;
+					p3Gr = 0;
+					if(p3_max_grazing == 180){
+						d3G = 1;
+ 5a4:	03 c0       	rjmp	.+6      	; 0x5ac <__LOCK_REGION_LENGTH__+0x1ac>
+ 5a6:	31 e0       	ldi	r19, 0x01	; 1
+ 5a8:	39 83       	std	Y+1, r19	; 0x01
+					}else{
+						d3W = 1; //open water door
+						p3_max_grazing = 240; //reset to default time
+					}
+					p3R_LED = 1; 
+					soundVBuzzer();
+ 5aa:	1a 82       	std	Y+2, r1	; 0x02
+ 5ac:	a6 dd       	rcall	.-1204   	; 0xfa <soundVBuzzer>
+					p3G_LED = 1; //set green led back on
+					PORTB |= (1<<2);
+				p3Gr_counter++;
+				p3Gr_total_counter++;
+				if(p3Gr_counter == p3_max_grazing){
+					p3Gr_counter = 0;
+ 5ae:	6d 96       	adiw	r28, 0x1d	; 29
+ 5b0:	1f ae       	std	Y+63, r1	; 0x3f
+ 5b2:	1e ae       	std	Y+62, r1	; 0x3e
+ 5b4:	6d 97       	sbiw	r28, 0x1d	; 29
+					p3Gr = 0;
+ 5b6:	1b 86       	std	Y+11, r1	; 0x0b
+ 5b8:	1c 86       	std	Y+12, r1	; 0x0c
+						d3G = 1;
+					}else{
+						d3W = 1; //open water door
+						p3_max_grazing = 240; //reset to default time
+					}
+					p3R_LED = 1; 
+ 5ba:	ee 24       	eor	r14, r14
+ 5bc:	e3 94       	inc	r14
+ 5be:	f1 2c       	mov	r15, r1
+					soundVBuzzer();
+				}
+			}
+			if(p4Gr){
+ 5c0:	8d 85       	ldd	r24, Y+13	; 0x0d
+ 5c2:	9e 85       	ldd	r25, Y+14	; 0x0e
+ 5c4:	89 2b       	or	r24, r25
+ 5c6:	b9 f1       	breq	.+110    	; 0x636 <__LOCK_REGION_LENGTH__+0x236>
+				if(!p4G_LED)
+ 5c8:	2b ad       	ldd	r18, Y+59	; 0x3b
+ 5ca:	3c ad       	ldd	r19, Y+60	; 0x3c
+ 5cc:	23 2b       	or	r18, r19
+ 5ce:	19 f4       	brne	.+6      	; 0x5d6 <__LOCK_REGION_LENGTH__+0x1d6>
+					p4G_LED = 1; //set green led back on
+ 5d0:	31 e0       	ldi	r19, 0x01	; 1
+ 5d2:	3b af       	std	Y+59, r19	; 0x3b
+ 5d4:	1c ae       	std	Y+60, r1	; 0x3c
+					PORTB |= (1<<3);
+ 5d6:	2b 9a       	sbi	0x05, 3	; 5
+				p4Gr_counter++;
+ 5d8:	6f 96       	adiw	r28, 0x1f	; 31
+ 5da:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 5dc:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 5de:	6f 97       	sbiw	r28, 0x1f	; 31
+ 5e0:	01 96       	adiw	r24, 0x01	; 1
+ 5e2:	6f 96       	adiw	r28, 0x1f	; 31
+ 5e4:	9f af       	std	Y+63, r25	; 0x3f
+ 5e6:	8e af       	std	Y+62, r24	; 0x3e
+ 5e8:	6f 97       	sbiw	r28, 0x1f	; 31
+				p4Gr_total_counter++;
+ 5ea:	af 96       	adiw	r28, 0x2f	; 47
+ 5ec:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 5ee:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 5f0:	af 97       	sbiw	r28, 0x2f	; 47
+ 5f2:	2f 5f       	subi	r18, 0xFF	; 255
+ 5f4:	3f 4f       	sbci	r19, 0xFF	; 255
+ 5f6:	af 96       	adiw	r28, 0x2f	; 47
+ 5f8:	3f af       	std	Y+63, r19	; 0x3f
+ 5fa:	2e af       	std	Y+62, r18	; 0x3e
+ 5fc:	af 97       	sbiw	r28, 0x2f	; 47
+				if(p4Gr_counter == p4_max_grazing){
+ 5fe:	2d a1       	ldd	r18, Y+37	; 0x25
+ 600:	3e a1       	ldd	r19, Y+38	; 0x26
+ 602:	28 17       	cp	r18, r24
+ 604:	39 07       	cpc	r19, r25
+ 606:	b9 f4       	brne	.+46     	; 0x636 <__LOCK_REGION_LENGTH__+0x236>
+					p4Gr_counter = 0;
+					p4Gr = 0;
+					if(p4_max_grazing == 180){
+ 608:	24 3b       	cpi	r18, 0xB4	; 180
+ 60a:	31 05       	cpc	r19, r1
+ 60c:	39 f0       	breq	.+14     	; 0x61c <__LOCK_REGION_LENGTH__+0x21c>
+						d4G = 1;
+					}else{
+						d4W = 1; //open water door
+						p4_max_grazing = 240; //reset to default time
+ 60e:	30 ef       	ldi	r19, 0xF0	; 240
+ 610:	3d a3       	std	Y+37, r19	; 0x25
+					p4Gr_counter = 0;
+					p4Gr = 0;
+					if(p4_max_grazing == 180){
+						d4G = 1;
+					}else{
+						d4W = 1; //open water door
+ 612:	1e a2       	std	Y+38, r1	; 0x26
+ 614:	81 e0       	ldi	r24, 0x01	; 1
+ 616:	8d 8f       	std	Y+29, r24	; 0x1d
+ 618:	1e 8e       	std	Y+30, r1	; 0x1e
+				p4Gr_total_counter++;
+				if(p4Gr_counter == p4_max_grazing){
+					p4Gr_counter = 0;
+					p4Gr = 0;
+					if(p4_max_grazing == 180){
+						d4G = 1;
+ 61a:	03 c0       	rjmp	.+6      	; 0x622 <__LOCK_REGION_LENGTH__+0x222>
+ 61c:	91 e0       	ldi	r25, 0x01	; 1
+ 61e:	9d 83       	std	Y+5, r25	; 0x05
+					}else{
+						d4W = 1; //open water door
+						p4_max_grazing = 240; //reset to default time
+					}
+					p4R_LED = 1; 
+					soundVBuzzer();
+ 620:	1e 82       	std	Y+6, r1	; 0x06
+ 622:	6b dd       	rcall	.-1322   	; 0xfa <soundVBuzzer>
+					p4G_LED = 1; //set green led back on
+					PORTB |= (1<<3);
+				p4Gr_counter++;
+				p4Gr_total_counter++;
+				if(p4Gr_counter == p4_max_grazing){
+					p4Gr_counter = 0;
+ 624:	6f 96       	adiw	r28, 0x1f	; 31
+ 626:	1f ae       	std	Y+63, r1	; 0x3f
+ 628:	1e ae       	std	Y+62, r1	; 0x3e
+ 62a:	6f 97       	sbiw	r28, 0x1f	; 31
+					p4Gr = 0;
+ 62c:	1d 86       	std	Y+13, r1	; 0x0d
+ 62e:	1e 86       	std	Y+14, r1	; 0x0e
+						d4G = 1;
+					}else{
+						d4W = 1; //open water door
+						p4_max_grazing = 240; //reset to default time
+					}
+					p4R_LED = 1; 
+ 630:	21 e0       	ldi	r18, 0x01	; 1
+ 632:	2b 83       	std	Y+3, r18	; 0x03
+ 634:	1c 82       	std	Y+4, r1	; 0x04
+					soundVBuzzer();
+				}
+			}
+			if(p1Wr){
+ 636:	8f 85       	ldd	r24, Y+15	; 0x0f
+ 638:	98 89       	ldd	r25, Y+16	; 0x10
+ 63a:	89 2b       	or	r24, r25
+ 63c:	39 f1       	breq	.+78     	; 0x68c <__LOCK_REGION_LENGTH__+0x28c>
+				p1Wr_counter++;
+ 63e:	a1 96       	adiw	r28, 0x21	; 33
+ 640:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 642:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 644:	a1 97       	sbiw	r28, 0x21	; 33
+ 646:	2f 5f       	subi	r18, 0xFF	; 255
+ 648:	3f 4f       	sbci	r19, 0xFF	; 255
+ 64a:	a1 96       	adiw	r28, 0x21	; 33
+ 64c:	3f af       	std	Y+63, r19	; 0x3f
+ 64e:	2e af       	std	Y+62, r18	; 0x3e
+ 650:	a1 97       	sbiw	r28, 0x21	; 33
+				if(p1Wr_counter == MAX_DRINKING){
+ 652:	28 37       	cpi	r18, 0x78	; 120
+ 654:	31 05       	cpc	r19, r1
+ 656:	d1 f4       	brne	.+52     	; 0x68c <__LOCK_REGION_LENGTH__+0x28c>
+					p1Wr_total_counter += p1Wr_counter;
+ 658:	e1 96       	adiw	r28, 0x31	; 49
+ 65a:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 65c:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 65e:	e1 97       	sbiw	r28, 0x31	; 49
+ 660:	88 58       	subi	r24, 0x88	; 136
+ 662:	9f 4f       	sbci	r25, 0xFF	; 255
+ 664:	e1 96       	adiw	r28, 0x31	; 49
+ 666:	9f af       	std	Y+63, r25	; 0x3f
+ 668:	8e af       	std	Y+62, r24	; 0x3e
+					p1Wr_counter = 0;
+					p1Wr = 0;
+					d1W = 1; //open WATER door
+					p1_max_grazing = 180; //set grazing time to 3 min
+					p1R_LED = 1; 
+					soundVBuzzer();
+ 66a:	e1 97       	sbiw	r28, 0x31	; 49
+ 66c:	46 dd       	rcall	.-1396   	; 0xfa <soundVBuzzer>
+				if(p1Wr_counter == MAX_DRINKING){
+					p1Wr_total_counter += p1Wr_counter;
+					p1Wr_counter = 0;
+					p1Wr = 0;
+					d1W = 1; //open WATER door
+					p1_max_grazing = 180; //set grazing time to 3 min
+ 66e:	94 eb       	ldi	r25, 0xB4	; 180
+ 670:	9f 8f       	std	Y+31, r25	; 0x1f
+ 672:	18 a2       	std	Y+32, r1	; 0x20
+			}
+			if(p1Wr){
+				p1Wr_counter++;
+				if(p1Wr_counter == MAX_DRINKING){
+					p1Wr_total_counter += p1Wr_counter;
+					p1Wr_counter = 0;
+ 674:	a1 96       	adiw	r28, 0x21	; 33
+ 676:	1f ae       	std	Y+63, r1	; 0x3f
+ 678:	1e ae       	std	Y+62, r1	; 0x3e
+ 67a:	a1 97       	sbiw	r28, 0x21	; 33
+					p1Wr = 0;
+ 67c:	1f 86       	std	Y+15, r1	; 0x0f
+ 67e:	18 8a       	std	Y+16, r1	; 0x10
+					d1W = 1; //open WATER door
+					p1_max_grazing = 180; //set grazing time to 3 min
+					p1R_LED = 1; 
+ 680:	cc 24       	eor	r12, r12
+ 682:	c3 94       	inc	r12
+ 684:	d1 2c       	mov	r13, r1
+				p1Wr_counter++;
+				if(p1Wr_counter == MAX_DRINKING){
+					p1Wr_total_counter += p1Wr_counter;
+					p1Wr_counter = 0;
+					p1Wr = 0;
+					d1W = 1; //open WATER door
+ 686:	21 e0       	ldi	r18, 0x01	; 1
+ 688:	2f 8b       	std	Y+23, r18	; 0x17
+ 68a:	18 8e       	std	Y+24, r1	; 0x18
+					p1_max_grazing = 180; //set grazing time to 3 min
+					p1R_LED = 1; 
+					soundVBuzzer();
+				}
+			}
+			if(p2Wr){
+ 68c:	89 89       	ldd	r24, Y+17	; 0x11
+ 68e:	9a 89       	ldd	r25, Y+18	; 0x12
+ 690:	89 2b       	or	r24, r25
+ 692:	31 f1       	breq	.+76     	; 0x6e0 <__LOCK_REGION_LENGTH__+0x2e0>
+				p2Wr_counter++;
+ 694:	a3 96       	adiw	r28, 0x23	; 35
+ 696:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 698:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 69a:	a3 97       	sbiw	r28, 0x23	; 35
+ 69c:	2f 5f       	subi	r18, 0xFF	; 255
+ 69e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 6a0:	a3 96       	adiw	r28, 0x23	; 35
+ 6a2:	3f af       	std	Y+63, r19	; 0x3f
+ 6a4:	2e af       	std	Y+62, r18	; 0x3e
+ 6a6:	a3 97       	sbiw	r28, 0x23	; 35
+				if(p2Wr_counter == MAX_DRINKING){
+ 6a8:	28 37       	cpi	r18, 0x78	; 120
+ 6aa:	31 05       	cpc	r19, r1
+					p2Wr_total_counter += p2Wr_counter;
+ 6ac:	c9 f4       	brne	.+50     	; 0x6e0 <__LOCK_REGION_LENGTH__+0x2e0>
+ 6ae:	e3 96       	adiw	r28, 0x33	; 51
+ 6b0:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 6b2:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 6b4:	e3 97       	sbiw	r28, 0x33	; 51
+ 6b6:	88 58       	subi	r24, 0x88	; 136
+ 6b8:	9f 4f       	sbci	r25, 0xFF	; 255
+ 6ba:	e3 96       	adiw	r28, 0x33	; 51
+ 6bc:	9f af       	std	Y+63, r25	; 0x3f
+ 6be:	8e af       	std	Y+62, r24	; 0x3e
+					p2Wr_counter = 0;
+					p2Wr = 0;
+					d2W = 1; //open WATER door
+					p2_max_grazing = 180; //set grazing time to 3 min
+					p2R_LED = 1; 
+					soundVBuzzer();
+ 6c0:	e3 97       	sbiw	r28, 0x33	; 51
+ 6c2:	1b dd       	rcall	.-1482   	; 0xfa <soundVBuzzer>
+				if(p2Wr_counter == MAX_DRINKING){
+					p2Wr_total_counter += p2Wr_counter;
+					p2Wr_counter = 0;
+					p2Wr = 0;
+					d2W = 1; //open WATER door
+					p2_max_grazing = 180; //set grazing time to 3 min
+ 6c4:	94 eb       	ldi	r25, 0xB4	; 180
+ 6c6:	99 a3       	std	Y+33, r25	; 0x21
+ 6c8:	1a a2       	std	Y+34, r1	; 0x22
+			}
+			if(p2Wr){
+				p2Wr_counter++;
+				if(p2Wr_counter == MAX_DRINKING){
+					p2Wr_total_counter += p2Wr_counter;
+					p2Wr_counter = 0;
+ 6ca:	a3 96       	adiw	r28, 0x23	; 35
+ 6cc:	1f ae       	std	Y+63, r1	; 0x3f
+ 6ce:	1e ae       	std	Y+62, r1	; 0x3e
+ 6d0:	a3 97       	sbiw	r28, 0x23	; 35
+					p2Wr = 0;
+ 6d2:	19 8a       	std	Y+17, r1	; 0x11
+ 6d4:	1a 8a       	std	Y+18, r1	; 0x12
+					d2W = 1; //open WATER door
+					p2_max_grazing = 180; //set grazing time to 3 min
+					p2R_LED = 1; 
+ 6d6:	01 e0       	ldi	r16, 0x01	; 1
+ 6d8:	10 e0       	ldi	r17, 0x00	; 0
+				p2Wr_counter++;
+				if(p2Wr_counter == MAX_DRINKING){
+					p2Wr_total_counter += p2Wr_counter;
+					p2Wr_counter = 0;
+					p2Wr = 0;
+					d2W = 1; //open WATER door
+ 6da:	21 e0       	ldi	r18, 0x01	; 1
+ 6dc:	29 8f       	std	Y+25, r18	; 0x19
+ 6de:	1a 8e       	std	Y+26, r1	; 0x1a
+					p2_max_grazing = 180; //set grazing time to 3 min
+					p2R_LED = 1; 
+					soundVBuzzer();
+				}
+			}
+			if(p3Wr){
+ 6e0:	8b 89       	ldd	r24, Y+19	; 0x13
+ 6e2:	9c 89       	ldd	r25, Y+20	; 0x14
+ 6e4:	89 2b       	or	r24, r25
+ 6e6:	39 f1       	breq	.+78     	; 0x736 <__LOCK_REGION_LENGTH__+0x336>
+				p3Wr_counter++;
+ 6e8:	a5 96       	adiw	r28, 0x25	; 37
+ 6ea:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 6ec:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 6ee:	a5 97       	sbiw	r28, 0x25	; 37
+ 6f0:	2f 5f       	subi	r18, 0xFF	; 255
+ 6f2:	3f 4f       	sbci	r19, 0xFF	; 255
+ 6f4:	a5 96       	adiw	r28, 0x25	; 37
+ 6f6:	3f af       	std	Y+63, r19	; 0x3f
+ 6f8:	2e af       	std	Y+62, r18	; 0x3e
+ 6fa:	a5 97       	sbiw	r28, 0x25	; 37
+				if(p3Wr_counter == MAX_DRINKING){
+ 6fc:	28 37       	cpi	r18, 0x78	; 120
+ 6fe:	31 05       	cpc	r19, r1
+					p3Wr_total_counter += p3Wr_counter;
+ 700:	d1 f4       	brne	.+52     	; 0x736 <__LOCK_REGION_LENGTH__+0x336>
+ 702:	e5 96       	adiw	r28, 0x35	; 53
+ 704:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 706:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 708:	e5 97       	sbiw	r28, 0x35	; 53
+ 70a:	88 58       	subi	r24, 0x88	; 136
+ 70c:	9f 4f       	sbci	r25, 0xFF	; 255
+ 70e:	e5 96       	adiw	r28, 0x35	; 53
+ 710:	9f af       	std	Y+63, r25	; 0x3f
+ 712:	8e af       	std	Y+62, r24	; 0x3e
+					p3Wr_counter = 0;
+					p3Wr = 0;
+					d3W = 1; //open WATER door
+					p3_max_grazing = 180; //set grazing time to 3 min
+					p3R_LED = 1; 
+					soundVBuzzer();
+ 714:	e5 97       	sbiw	r28, 0x35	; 53
+ 716:	f1 dc       	rcall	.-1566   	; 0xfa <soundVBuzzer>
+				if(p3Wr_counter == MAX_DRINKING){
+					p3Wr_total_counter += p3Wr_counter;
+					p3Wr_counter = 0;
+					p3Wr = 0;
+					d3W = 1; //open WATER door
+					p3_max_grazing = 180; //set grazing time to 3 min
+ 718:	94 eb       	ldi	r25, 0xB4	; 180
+ 71a:	9b a3       	std	Y+35, r25	; 0x23
+ 71c:	1c a2       	std	Y+36, r1	; 0x24
+			}
+			if(p3Wr){
+				p3Wr_counter++;
+				if(p3Wr_counter == MAX_DRINKING){
+					p3Wr_total_counter += p3Wr_counter;
+					p3Wr_counter = 0;
+ 71e:	a5 96       	adiw	r28, 0x25	; 37
+ 720:	1f ae       	std	Y+63, r1	; 0x3f
+ 722:	1e ae       	std	Y+62, r1	; 0x3e
+ 724:	a5 97       	sbiw	r28, 0x25	; 37
+					p3Wr = 0;
+ 726:	1b 8a       	std	Y+19, r1	; 0x13
+ 728:	1c 8a       	std	Y+20, r1	; 0x14
+					d3W = 1; //open WATER door
+					p3_max_grazing = 180; //set grazing time to 3 min
+					p3R_LED = 1; 
+ 72a:	ee 24       	eor	r14, r14
+ 72c:	e3 94       	inc	r14
+ 72e:	f1 2c       	mov	r15, r1
+				p3Wr_counter++;
+				if(p3Wr_counter == MAX_DRINKING){
+					p3Wr_total_counter += p3Wr_counter;
+					p3Wr_counter = 0;
+					p3Wr = 0;
+					d3W = 1; //open WATER door
+ 730:	21 e0       	ldi	r18, 0x01	; 1
+ 732:	2b 8f       	std	Y+27, r18	; 0x1b
+ 734:	1c 8e       	std	Y+28, r1	; 0x1c
+					p3_max_grazing = 180; //set grazing time to 3 min
+					p3R_LED = 1; 
+					soundVBuzzer();
+				}
+			}
+			if(p4Wr){
+ 736:	8d 89       	ldd	r24, Y+21	; 0x15
+ 738:	9e 89       	ldd	r25, Y+22	; 0x16
+ 73a:	89 2b       	or	r24, r25
+ 73c:	31 f1       	breq	.+76     	; 0x78a <__LOCK_REGION_LENGTH__+0x38a>
+				p4Wr_counter++;
+ 73e:	a7 96       	adiw	r28, 0x27	; 39
+ 740:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 742:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 744:	a7 97       	sbiw	r28, 0x27	; 39
+ 746:	2f 5f       	subi	r18, 0xFF	; 255
+ 748:	3f 4f       	sbci	r19, 0xFF	; 255
+ 74a:	a7 96       	adiw	r28, 0x27	; 39
+ 74c:	3f af       	std	Y+63, r19	; 0x3f
+ 74e:	2e af       	std	Y+62, r18	; 0x3e
+ 750:	a7 97       	sbiw	r28, 0x27	; 39
+				if(p4Wr_counter == MAX_DRINKING){
+ 752:	28 37       	cpi	r18, 0x78	; 120
+ 754:	31 05       	cpc	r19, r1
+					p4Wr_total_counter += p4Wr_counter;
+ 756:	c9 f4       	brne	.+50     	; 0x78a <__LOCK_REGION_LENGTH__+0x38a>
+ 758:	e7 96       	adiw	r28, 0x37	; 55
+ 75a:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 75c:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 75e:	e7 97       	sbiw	r28, 0x37	; 55
+ 760:	88 58       	subi	r24, 0x88	; 136
+ 762:	9f 4f       	sbci	r25, 0xFF	; 255
+ 764:	e7 96       	adiw	r28, 0x37	; 55
+ 766:	9f af       	std	Y+63, r25	; 0x3f
+ 768:	8e af       	std	Y+62, r24	; 0x3e
+					p4Wr_counter = 0;
+					p4Wr = 0;
+					d4W = 1; //open WATER door
+					p4_max_grazing = 180; //set grazing time to 3 min
+					p4R_LED = 1; 
+					soundVBuzzer();
+ 76a:	e7 97       	sbiw	r28, 0x37	; 55
+ 76c:	c6 dc       	rcall	.-1652   	; 0xfa <soundVBuzzer>
+				if(p4Wr_counter == MAX_DRINKING){
+					p4Wr_total_counter += p4Wr_counter;
+					p4Wr_counter = 0;
+					p4Wr = 0;
+					d4W = 1; //open WATER door
+					p4_max_grazing = 180; //set grazing time to 3 min
+ 76e:	94 eb       	ldi	r25, 0xB4	; 180
+ 770:	9d a3       	std	Y+37, r25	; 0x25
+ 772:	1e a2       	std	Y+38, r1	; 0x26
+			}
+			if(p4Wr){
+				p4Wr_counter++;
+				if(p4Wr_counter == MAX_DRINKING){
+					p4Wr_total_counter += p4Wr_counter;
+					p4Wr_counter = 0;
+ 774:	a7 96       	adiw	r28, 0x27	; 39
+ 776:	1f ae       	std	Y+63, r1	; 0x3f
+ 778:	1e ae       	std	Y+62, r1	; 0x3e
+ 77a:	a7 97       	sbiw	r28, 0x27	; 39
+					p4Wr = 0;
+ 77c:	1d 8a       	std	Y+21, r1	; 0x15
+ 77e:	1e 8a       	std	Y+22, r1	; 0x16
+					d4W = 1; //open WATER door
+					p4_max_grazing = 180; //set grazing time to 3 min
+					p4R_LED = 1; 
+ 780:	21 e0       	ldi	r18, 0x01	; 1
+ 782:	2b 83       	std	Y+3, r18	; 0x03
+ 784:	1c 82       	std	Y+4, r1	; 0x04
+				p4Wr_counter++;
+				if(p4Wr_counter == MAX_DRINKING){
+					p4Wr_total_counter += p4Wr_counter;
+					p4Wr_counter = 0;
+					p4Wr = 0;
+					d4W = 1; //open WATER door
+ 786:	2d 8f       	std	Y+29, r18	; 0x1d
+ 788:	1e 8e       	std	Y+30, r1	; 0x1e
+				}
+			}
+			
+			
+			//check if door is opened
+			if(d1G){
+ 78a:	81 14       	cp	r8, r1
+ 78c:	91 04       	cpc	r9, r1
+ 78e:	71 f1       	breq	.+92     	; 0x7ec <__LOCK_REGION_LENGTH__+0x3ec>
+				d1G_counter++;
+ 790:	21 96       	adiw	r28, 0x01	; 1
+ 792:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 794:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 796:	21 97       	sbiw	r28, 0x01	; 1
+ 798:	01 96       	adiw	r24, 0x01	; 1
+ 79a:	21 96       	adiw	r28, 0x01	; 1
+ 79c:	9f af       	std	Y+63, r25	; 0x3f
+ 79e:	8e af       	std	Y+62, r24	; 0x3e
+ 7a0:	21 97       	sbiw	r28, 0x01	; 1
+				if(d1G_counter == 40){
+ 7a2:	88 32       	cpi	r24, 0x28	; 40
+ 7a4:	91 05       	cpc	r25, r1
+ 7a6:	99 f0       	breq	.+38     	; 0x7ce <__LOCK_REGION_LENGTH__+0x3ce>
+					d1G_counter = 0;
+					d1G = 0;
+					d1Gi = 1;
+				}else if(d1G_counter == 4){
+ 7a8:	04 97       	sbiw	r24, 0x04	; 4
+ 7aa:	01 f5       	brne	.+64     	; 0x7ec <__LOCK_REGION_LENGTH__+0x3ec>
+					if(d1Gi && (p1Gr_total_counter == 0)){
+ 7ac:	2f a1       	ldd	r18, Y+39	; 0x27
+ 7ae:	38 a5       	ldd	r19, Y+40	; 0x28
+ 7b0:	23 2b       	or	r18, r19
+ 7b2:	31 f0       	breq	.+12     	; 0x7c0 <__LOCK_REGION_LENGTH__+0x3c0>
+ 7b4:	a9 96       	adiw	r28, 0x29	; 41
+ 7b6:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 7b8:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 7ba:	a9 97       	sbiw	r28, 0x29	; 41
+ 7bc:	89 2b       	or	r24, r25
+ 7be:	89 f0       	breq	.+34     	; 0x7e2 <__LOCK_REGION_LENGTH__+0x3e2>
+					}
+					else{
+						//stop grazing timer
+						p1Gr = 0;
+						p1G_LED = 0; //turn off green light
+						PORTB &= (0<<0);
+ 7c0:	85 b1       	in	r24, 0x05	; 5
+ 7c2:	15 b8       	out	0x05, r1	; 5
+						//set grazing counter
+						p1Gr = 1;
+					}
+					else{
+						//stop grazing timer
+						p1Gr = 0;
+ 7c4:	1f 82       	std	Y+7, r1	; 0x07
+ 7c6:	18 86       	std	Y+8, r1	; 0x08
+						p1G_LED = 0; //turn off green light
+ 7c8:	1d aa       	std	Y+53, r1	; 0x35
+ 7ca:	1e aa       	std	Y+54, r1	; 0x36
+ 7cc:	0f c0       	rjmp	.+30     	; 0x7ec <__LOCK_REGION_LENGTH__+0x3ec>
+			
+			//check if door is opened
+			if(d1G){
+				d1G_counter++;
+				if(d1G_counter == 40){
+					d1G_counter = 0;
+ 7ce:	21 96       	adiw	r28, 0x01	; 1
+ 7d0:	1f ae       	std	Y+63, r1	; 0x3f
+ 7d2:	1e ae       	std	Y+62, r1	; 0x3e
+ 7d4:	21 97       	sbiw	r28, 0x01	; 1
+					d1G = 0;
+					d1Gi = 1;
+ 7d6:	91 e0       	ldi	r25, 0x01	; 1
+ 7d8:	9f a3       	std	Y+39, r25	; 0x27
+ 7da:	18 a6       	std	Y+40, r1	; 0x28
+			//check if door is opened
+			if(d1G){
+				d1G_counter++;
+				if(d1G_counter == 40){
+					d1G_counter = 0;
+					d1G = 0;
+ 7dc:	81 2c       	mov	r8, r1
+ 7de:	91 2c       	mov	r9, r1
+ 7e0:	05 c0       	rjmp	.+10     	; 0x7ec <__LOCK_REGION_LENGTH__+0x3ec>
+					d1Gi = 1;
+				}else if(d1G_counter == 4){
+					if(d1Gi && (p1Gr_total_counter == 0)){
+						d1Gi = 0;
+						//set grazing counter
+						p1Gr = 1;
+ 7e2:	21 e0       	ldi	r18, 0x01	; 1
+ 7e4:	2f 83       	std	Y+7, r18	; 0x07
+ 7e6:	18 86       	std	Y+8, r1	; 0x08
+					d1G_counter = 0;
+					d1G = 0;
+					d1Gi = 1;
+				}else if(d1G_counter == 4){
+					if(d1Gi && (p1Gr_total_counter == 0)){
+						d1Gi = 0;
+ 7e8:	1f a2       	std	Y+39, r1	; 0x27
+ 7ea:	18 a6       	std	Y+40, r1	; 0x28
+						PORTB &= (0<<0);
+					}
+				}
+		
+			}
+			if(d2G){
+ 7ec:	a1 14       	cp	r10, r1
+ 7ee:	b1 04       	cpc	r11, r1
+ 7f0:	71 f1       	breq	.+92     	; 0x84e <__LOCK_REGION_LENGTH__+0x44e>
+				d2G_counter++;
+ 7f2:	25 96       	adiw	r28, 0x05	; 5
+ 7f4:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 7f6:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 7f8:	25 97       	sbiw	r28, 0x05	; 5
+ 7fa:	01 96       	adiw	r24, 0x01	; 1
+ 7fc:	25 96       	adiw	r28, 0x05	; 5
+ 7fe:	9f af       	std	Y+63, r25	; 0x3f
+ 800:	8e af       	std	Y+62, r24	; 0x3e
+ 802:	25 97       	sbiw	r28, 0x05	; 5
+				if(d2G_counter == 40){
+ 804:	88 32       	cpi	r24, 0x28	; 40
+ 806:	91 05       	cpc	r25, r1
+ 808:	99 f0       	breq	.+38     	; 0x830 <__LOCK_REGION_LENGTH__+0x430>
+					d2G_counter = 0;
+					d2G = 0;
+					d2Gi = 1;
+				}else if(d2G_counter == 4){
+ 80a:	04 97       	sbiw	r24, 0x04	; 4
+ 80c:	01 f5       	brne	.+64     	; 0x84e <__LOCK_REGION_LENGTH__+0x44e>
+					if(d2Gi && (p2Gr_total_counter == 0)){
+ 80e:	2b a5       	ldd	r18, Y+43	; 0x2b
+ 810:	3c a5       	ldd	r19, Y+44	; 0x2c
+ 812:	23 2b       	or	r18, r19
+ 814:	31 f0       	breq	.+12     	; 0x822 <__LOCK_REGION_LENGTH__+0x422>
+ 816:	ab 96       	adiw	r28, 0x2b	; 43
+ 818:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 81a:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 81c:	ab 97       	sbiw	r28, 0x2b	; 43
+ 81e:	89 2b       	or	r24, r25
+ 820:	89 f0       	breq	.+34     	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+					}
+					else{
+						//stop grazing timer
+						p2Gr = 0;
+						p2G_LED = 0; //turn off green light
+						PORTB &= (0<<1);
+ 822:	85 b1       	in	r24, 0x05	; 5
+ 824:	15 b8       	out	0x05, r1	; 5
+						//set grazing counter
+						p2Gr = 1;
+					}
+					else{
+						//stop grazing timer
+						p2Gr = 0;
+ 826:	19 86       	std	Y+9, r1	; 0x09
+ 828:	1a 86       	std	Y+10, r1	; 0x0a
+						p2G_LED = 0; //turn off green light
+ 82a:	1f aa       	std	Y+55, r1	; 0x37
+ 82c:	18 ae       	std	Y+56, r1	; 0x38
+ 82e:	0f c0       	rjmp	.+30     	; 0x84e <__LOCK_REGION_LENGTH__+0x44e>
+		
+			}
+			if(d2G){
+				d2G_counter++;
+				if(d2G_counter == 40){
+					d2G_counter = 0;
+ 830:	25 96       	adiw	r28, 0x05	; 5
+ 832:	1f ae       	std	Y+63, r1	; 0x3f
+ 834:	1e ae       	std	Y+62, r1	; 0x3e
+ 836:	25 97       	sbiw	r28, 0x05	; 5
+					d2G = 0;
+					d2Gi = 1;
+ 838:	91 e0       	ldi	r25, 0x01	; 1
+ 83a:	9b a7       	std	Y+43, r25	; 0x2b
+ 83c:	1c a6       	std	Y+44, r1	; 0x2c
+			}
+			if(d2G){
+				d2G_counter++;
+				if(d2G_counter == 40){
+					d2G_counter = 0;
+					d2G = 0;
+ 83e:	a1 2c       	mov	r10, r1
+ 840:	b1 2c       	mov	r11, r1
+ 842:	05 c0       	rjmp	.+10     	; 0x84e <__LOCK_REGION_LENGTH__+0x44e>
+					d2Gi = 1;
+				}else if(d2G_counter == 4){
+					if(d2Gi && (p2Gr_total_counter == 0)){
+						d2Gi = 0;
+						//set grazing counter
+						p2Gr = 1;
+ 844:	21 e0       	ldi	r18, 0x01	; 1
+ 846:	29 87       	std	Y+9, r18	; 0x09
+ 848:	1a 86       	std	Y+10, r1	; 0x0a
+					d2G_counter = 0;
+					d2G = 0;
+					d2Gi = 1;
+				}else if(d2G_counter == 4){
+					if(d2Gi && (p2Gr_total_counter == 0)){
+						d2Gi = 0;
+ 84a:	1b a6       	std	Y+43, r1	; 0x2b
+ 84c:	1c a6       	std	Y+44, r1	; 0x2c
+						p2G_LED = 0; //turn off green light
+						PORTB &= (0<<1);
+					}
+				}
+			}
+			if(d3G){
+ 84e:	89 81       	ldd	r24, Y+1	; 0x01
+ 850:	9a 81       	ldd	r25, Y+2	; 0x02
+ 852:	89 2b       	or	r24, r25
+ 854:	81 f1       	breq	.+96     	; 0x8b6 <__LOCK_REGION_LENGTH__+0x4b6>
+				d3G_counter++;
+ 856:	29 96       	adiw	r28, 0x09	; 9
+ 858:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 85a:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 85c:	29 97       	sbiw	r28, 0x09	; 9
+ 85e:	2f 5f       	subi	r18, 0xFF	; 255
+ 860:	3f 4f       	sbci	r19, 0xFF	; 255
+ 862:	29 96       	adiw	r28, 0x09	; 9
+ 864:	3f af       	std	Y+63, r19	; 0x3f
+ 866:	2e af       	std	Y+62, r18	; 0x3e
+ 868:	29 97       	sbiw	r28, 0x09	; 9
+				if(d3G_counter == 40){
+ 86a:	28 32       	cpi	r18, 0x28	; 40
+ 86c:	31 05       	cpc	r19, r1
+ 86e:	a1 f0       	breq	.+40     	; 0x898 <__LOCK_REGION_LENGTH__+0x498>
+					d3G_counter = 0;
+					d3G = 0;
+					d3Gi = 1;
+				}else if(d3G_counter == 4){
+ 870:	24 30       	cpi	r18, 0x04	; 4
+ 872:	31 05       	cpc	r19, r1
+ 874:	01 f5       	brne	.+64     	; 0x8b6 <__LOCK_REGION_LENGTH__+0x4b6>
+					if(d3Gi && (p3Gr_total_counter == 0)){
+ 876:	8f a5       	ldd	r24, Y+47	; 0x2f
+ 878:	98 a9       	ldd	r25, Y+48	; 0x30
+ 87a:	89 2b       	or	r24, r25
+ 87c:	31 f0       	breq	.+12     	; 0x88a <__LOCK_REGION_LENGTH__+0x48a>
+ 87e:	ad 96       	adiw	r28, 0x2d	; 45
+ 880:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 882:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 884:	ad 97       	sbiw	r28, 0x2d	; 45
+ 886:	23 2b       	or	r18, r19
+ 888:	89 f0       	breq	.+34     	; 0x8ac <__LOCK_REGION_LENGTH__+0x4ac>
+					}
+					else{
+						//stop grazing timer
+						p3Gr = 0;
+						p3G_LED = 0; //turn off green light
+						PORTB &= (0<<2);
+ 88a:	85 b1       	in	r24, 0x05	; 5
+ 88c:	15 b8       	out	0x05, r1	; 5
+						//set grazing counter
+						p3Gr = 1;
+					}
+					else{
+						//stop grazing timer
+						p3Gr = 0;
+ 88e:	1b 86       	std	Y+11, r1	; 0x0b
+ 890:	1c 86       	std	Y+12, r1	; 0x0c
+						p3G_LED = 0; //turn off green light
+ 892:	19 ae       	std	Y+57, r1	; 0x39
+ 894:	1a ae       	std	Y+58, r1	; 0x3a
+ 896:	0f c0       	rjmp	.+30     	; 0x8b6 <__LOCK_REGION_LENGTH__+0x4b6>
+				}
+			}
+			if(d3G){
+				d3G_counter++;
+				if(d3G_counter == 40){
+					d3G_counter = 0;
+ 898:	29 96       	adiw	r28, 0x09	; 9
+ 89a:	1f ae       	std	Y+63, r1	; 0x3f
+ 89c:	1e ae       	std	Y+62, r1	; 0x3e
+ 89e:	29 97       	sbiw	r28, 0x09	; 9
+					d3G = 0;
+					d3Gi = 1;
+ 8a0:	31 e0       	ldi	r19, 0x01	; 1
+ 8a2:	3f a7       	std	Y+47, r19	; 0x2f
+ 8a4:	18 aa       	std	Y+48, r1	; 0x30
+			}
+			if(d3G){
+				d3G_counter++;
+				if(d3G_counter == 40){
+					d3G_counter = 0;
+					d3G = 0;
+ 8a6:	19 82       	std	Y+1, r1	; 0x01
+ 8a8:	1a 82       	std	Y+2, r1	; 0x02
+ 8aa:	05 c0       	rjmp	.+10     	; 0x8b6 <__LOCK_REGION_LENGTH__+0x4b6>
+					d3Gi = 1;
+				}else if(d3G_counter == 4){
+					if(d3Gi && (p3Gr_total_counter == 0)){
+						d3Gi = 0;
+						//set grazing counter
+						p3Gr = 1;
+ 8ac:	81 e0       	ldi	r24, 0x01	; 1
+ 8ae:	8b 87       	std	Y+11, r24	; 0x0b
+ 8b0:	1c 86       	std	Y+12, r1	; 0x0c
+					d3G_counter = 0;
+					d3G = 0;
+					d3Gi = 1;
+				}else if(d3G_counter == 4){
+					if(d3Gi && (p3Gr_total_counter == 0)){
+						d3Gi = 0;
+ 8b2:	1f a6       	std	Y+47, r1	; 0x2f
+ 8b4:	18 aa       	std	Y+48, r1	; 0x30
+						p3G_LED = 0; //turn off green light
+						PORTB &= (0<<2);
+					}
+				}
+			}
+			if(d4G){
+ 8b6:	2d 81       	ldd	r18, Y+5	; 0x05
+ 8b8:	3e 81       	ldd	r19, Y+6	; 0x06
+ 8ba:	23 2b       	or	r18, r19
+ 8bc:	71 f1       	breq	.+92     	; 0x91a <__LOCK_REGION_LENGTH__+0x51a>
+				d4G_counter++;
+ 8be:	2d 96       	adiw	r28, 0x0d	; 13
+ 8c0:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 8c2:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 8c4:	2d 97       	sbiw	r28, 0x0d	; 13
+ 8c6:	01 96       	adiw	r24, 0x01	; 1
+ 8c8:	2d 96       	adiw	r28, 0x0d	; 13
+ 8ca:	9f af       	std	Y+63, r25	; 0x3f
+ 8cc:	8e af       	std	Y+62, r24	; 0x3e
+ 8ce:	2d 97       	sbiw	r28, 0x0d	; 13
+				if(d4G_counter == 40){
+ 8d0:	88 32       	cpi	r24, 0x28	; 40
+ 8d2:	91 05       	cpc	r25, r1
+ 8d4:	99 f0       	breq	.+38     	; 0x8fc <__LOCK_REGION_LENGTH__+0x4fc>
+					d4G_counter = 0;
+					d4G = 0;
+					d4Gi = 1;
+				}else if(d4G_counter == 4){
+ 8d6:	04 97       	sbiw	r24, 0x04	; 4
+ 8d8:	01 f5       	brne	.+64     	; 0x91a <__LOCK_REGION_LENGTH__+0x51a>
+					if(d4Gi && (p4Gr_total_counter == 0)){
+ 8da:	2b a9       	ldd	r18, Y+51	; 0x33
+ 8dc:	3c a9       	ldd	r19, Y+52	; 0x34
+ 8de:	23 2b       	or	r18, r19
+ 8e0:	31 f0       	breq	.+12     	; 0x8ee <__LOCK_REGION_LENGTH__+0x4ee>
+ 8e2:	af 96       	adiw	r28, 0x2f	; 47
+ 8e4:	8e ad       	ldd	r24, Y+62	; 0x3e
+ 8e6:	9f ad       	ldd	r25, Y+63	; 0x3f
+ 8e8:	af 97       	sbiw	r28, 0x2f	; 47
+ 8ea:	89 2b       	or	r24, r25
+ 8ec:	89 f0       	breq	.+34     	; 0x910 <__LOCK_REGION_LENGTH__+0x510>
+					}
+					else{
+						//stop grazing timer
+						p4Gr = 0;
+						p4G_LED = 0; //turn off green light
+						PORTB &= (0<<3);
+ 8ee:	85 b1       	in	r24, 0x05	; 5
+ 8f0:	15 b8       	out	0x05, r1	; 5
+						//set grazing counter
+						p4Gr = 1;
+					}
+					else{
+						//stop grazing timer
+						p4Gr = 0;
+ 8f2:	1d 86       	std	Y+13, r1	; 0x0d
+ 8f4:	1e 86       	std	Y+14, r1	; 0x0e
+						p4G_LED = 0; //turn off green light
+ 8f6:	1b ae       	std	Y+59, r1	; 0x3b
+ 8f8:	1c ae       	std	Y+60, r1	; 0x3c
+ 8fa:	0f c0       	rjmp	.+30     	; 0x91a <__LOCK_REGION_LENGTH__+0x51a>
+				}
+			}
+			if(d4G){
+				d4G_counter++;
+				if(d4G_counter == 40){
+					d4G_counter = 0;
+ 8fc:	2d 96       	adiw	r28, 0x0d	; 13
+ 8fe:	1f ae       	std	Y+63, r1	; 0x3f
+ 900:	1e ae       	std	Y+62, r1	; 0x3e
+ 902:	2d 97       	sbiw	r28, 0x0d	; 13
+					d4G = 0;
+					d4Gi = 1;
+ 904:	91 e0       	ldi	r25, 0x01	; 1
+ 906:	9b ab       	std	Y+51, r25	; 0x33
+ 908:	1c aa       	std	Y+52, r1	; 0x34
+			}
+			if(d4G){
+				d4G_counter++;
+				if(d4G_counter == 40){
+					d4G_counter = 0;
+					d4G = 0;
+ 90a:	1d 82       	std	Y+5, r1	; 0x05
+ 90c:	1e 82       	std	Y+6, r1	; 0x06
+ 90e:	05 c0       	rjmp	.+10     	; 0x91a <__LOCK_REGION_LENGTH__+0x51a>
+					d4Gi = 1;
+				}else if(d4G_counter == 4){
+					if(d4Gi && (p4Gr_total_counter == 0)){
+						d4Gi = 0;
+						//set grazing counter
+						p4Gr = 1;
+ 910:	21 e0       	ldi	r18, 0x01	; 1
+ 912:	2d 87       	std	Y+13, r18	; 0x0d
+ 914:	1e 86       	std	Y+14, r1	; 0x0e
+					d4G_counter = 0;
+					d4G = 0;
+					d4Gi = 1;
+				}else if(d4G_counter == 4){
+					if(d4Gi && (p4Gr_total_counter == 0)){
+						d4Gi = 0;
+ 916:	1b aa       	std	Y+51, r1	; 0x33
+ 918:	1c aa       	std	Y+52, r1	; 0x34
+						p4G_LED = 0; //turn off green light
+						PORTB &= (0<<3);
+					}
+				}
+			}
+			if(d1W){
+ 91a:	8f 89       	ldd	r24, Y+23	; 0x17
+ 91c:	98 8d       	ldd	r25, Y+24	; 0x18
+ 91e:	89 2b       	or	r24, r25
+ 920:	a9 f1       	breq	.+106    	; 0x98c <__LOCK_REGION_LENGTH__+0x58c>
+				d1W_counter++;
+ 922:	23 96       	adiw	r28, 0x03	; 3
+ 924:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 926:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 928:	23 97       	sbiw	r28, 0x03	; 3
+ 92a:	2f 5f       	subi	r18, 0xFF	; 255
+ 92c:	3f 4f       	sbci	r19, 0xFF	; 255
+ 92e:	23 96       	adiw	r28, 0x03	; 3
+ 930:	3f af       	std	Y+63, r19	; 0x3f
+ 932:	2e af       	std	Y+62, r18	; 0x3e
+ 934:	23 97       	sbiw	r28, 0x03	; 3
+				if(d1W_counter == 40){
+ 936:	28 32       	cpi	r18, 0x28	; 40
+ 938:	31 05       	cpc	r19, r1
+ 93a:	99 f0       	breq	.+38     	; 0x962 <__LOCK_REGION_LENGTH__+0x562>
+					d1W_counter = 0;
+					d1W = 0;
+					d1Wi = 1;
+				}else if(d1W_counter == 4){
+ 93c:	24 30       	cpi	r18, 0x04	; 4
+ 93e:	31 05       	cpc	r19, r1
+ 940:	29 f5       	brne	.+74     	; 0x98c <__LOCK_REGION_LENGTH__+0x58c>
+					if(d1Wi && (p1Wr_total_counter == 0)){
+ 942:	89 a5       	ldd	r24, Y+41	; 0x29
+ 944:	9a a5       	ldd	r25, Y+42	; 0x2a
+ 946:	89 2b       	or	r24, r25
+ 948:	b1 f0       	breq	.+44     	; 0x976 <__LOCK_REGION_LENGTH__+0x576>
+ 94a:	e1 96       	adiw	r28, 0x31	; 49
+ 94c:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 94e:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 950:	e1 97       	sbiw	r28, 0x31	; 49
+ 952:	23 2b       	or	r18, r19
+ 954:	b1 f4       	brne	.+44     	; 0x982 <__LOCK_REGION_LENGTH__+0x582>
+						d1Wi = 0;
+						//start water counter
+						p1Wr = 1;
+ 956:	31 e0       	ldi	r19, 0x01	; 1
+ 958:	3f 87       	std	Y+15, r19	; 0x0f
+ 95a:	18 8a       	std	Y+16, r1	; 0x10
+					d1W_counter = 0;
+					d1W = 0;
+					d1Wi = 1;
+				}else if(d1W_counter == 4){
+					if(d1Wi && (p1Wr_total_counter == 0)){
+						d1Wi = 0;
+ 95c:	19 a6       	std	Y+41, r1	; 0x29
+ 95e:	1a a6       	std	Y+42, r1	; 0x2a
+ 960:	15 c0       	rjmp	.+42     	; 0x98c <__LOCK_REGION_LENGTH__+0x58c>
+				}
+			}
+			if(d1W){
+				d1W_counter++;
+				if(d1W_counter == 40){
+					d1W_counter = 0;
+ 962:	23 96       	adiw	r28, 0x03	; 3
+ 964:	1f ae       	std	Y+63, r1	; 0x3f
+ 966:	1e ae       	std	Y+62, r1	; 0x3e
+ 968:	23 97       	sbiw	r28, 0x03	; 3
+					d1W = 0;
+					d1Wi = 1;
+ 96a:	81 e0       	ldi	r24, 0x01	; 1
+ 96c:	89 a7       	std	Y+41, r24	; 0x29
+ 96e:	1a a6       	std	Y+42, r1	; 0x2a
+			}
+			if(d1W){
+				d1W_counter++;
+				if(d1W_counter == 40){
+					d1W_counter = 0;
+					d1W = 0;
+ 970:	1f 8a       	std	Y+23, r1	; 0x17
+ 972:	18 8e       	std	Y+24, r1	; 0x18
+ 974:	0b c0       	rjmp	.+22     	; 0x98c <__LOCK_REGION_LENGTH__+0x58c>
+						//start water counter
+						p1Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p1Gr = 1;
+						p1Wr = 0;
+ 976:	1f 86       	std	Y+15, r1	; 0x0f
+ 978:	18 8a       	std	Y+16, r1	; 0x10
+						d1Wi = 0;
+						//start water counter
+						p1Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p1Gr = 1;
+ 97a:	91 e0       	ldi	r25, 0x01	; 1
+ 97c:	9f 83       	std	Y+7, r25	; 0x07
+ 97e:	18 86       	std	Y+8, r1	; 0x08
+ 980:	05 c0       	rjmp	.+10     	; 0x98c <__LOCK_REGION_LENGTH__+0x58c>
+						p1Wr = 0;
+ 982:	1f 86       	std	Y+15, r1	; 0x0f
+ 984:	18 8a       	std	Y+16, r1	; 0x10
+						d1Wi = 0;
+						//start water counter
+						p1Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p1Gr = 1;
+ 986:	21 e0       	ldi	r18, 0x01	; 1
+ 988:	2f 83       	std	Y+7, r18	; 0x07
+ 98a:	18 86       	std	Y+8, r1	; 0x08
+						p1Wr = 0;
+					}
+				}
+			}
+			if(d2W){
+ 98c:	89 8d       	ldd	r24, Y+25	; 0x19
+ 98e:	9a 8d       	ldd	r25, Y+26	; 0x1a
+ 990:	89 2b       	or	r24, r25
+ 992:	a9 f1       	breq	.+106    	; 0x9fe <__LOCK_REGION_LENGTH__+0x5fe>
+				d2W_counter++;
+ 994:	27 96       	adiw	r28, 0x07	; 7
+ 996:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 998:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 99a:	27 97       	sbiw	r28, 0x07	; 7
+ 99c:	2f 5f       	subi	r18, 0xFF	; 255
+ 99e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 9a0:	27 96       	adiw	r28, 0x07	; 7
+ 9a2:	3f af       	std	Y+63, r19	; 0x3f
+ 9a4:	2e af       	std	Y+62, r18	; 0x3e
+ 9a6:	27 97       	sbiw	r28, 0x07	; 7
+				if(d2W_counter == 40){
+ 9a8:	28 32       	cpi	r18, 0x28	; 40
+ 9aa:	31 05       	cpc	r19, r1
+ 9ac:	99 f0       	breq	.+38     	; 0x9d4 <__LOCK_REGION_LENGTH__+0x5d4>
+					d2W_counter = 0;
+					d2W = 0;
+					d2Wi = 1;
+				}else if(d2W_counter == 4){
+ 9ae:	24 30       	cpi	r18, 0x04	; 4
+ 9b0:	31 05       	cpc	r19, r1
+ 9b2:	29 f5       	brne	.+74     	; 0x9fe <__LOCK_REGION_LENGTH__+0x5fe>
+					if(d2Wi && (p2Wr_total_counter == 0)){
+ 9b4:	8d a5       	ldd	r24, Y+45	; 0x2d
+ 9b6:	9e a5       	ldd	r25, Y+46	; 0x2e
+ 9b8:	89 2b       	or	r24, r25
+ 9ba:	b1 f0       	breq	.+44     	; 0x9e8 <__LOCK_REGION_LENGTH__+0x5e8>
+ 9bc:	e3 96       	adiw	r28, 0x33	; 51
+ 9be:	2e ad       	ldd	r18, Y+62	; 0x3e
+ 9c0:	3f ad       	ldd	r19, Y+63	; 0x3f
+ 9c2:	e3 97       	sbiw	r28, 0x33	; 51
+ 9c4:	23 2b       	or	r18, r19
+ 9c6:	b1 f4       	brne	.+44     	; 0x9f4 <__LOCK_REGION_LENGTH__+0x5f4>
+						d2Wi = 0;
+						//start water counter
+						p2Wr = 1;
+ 9c8:	31 e0       	ldi	r19, 0x01	; 1
+ 9ca:	39 8b       	std	Y+17, r19	; 0x11
+ 9cc:	1a 8a       	std	Y+18, r1	; 0x12
+					d2W_counter = 0;
+					d2W = 0;
+					d2Wi = 1;
+				}else if(d2W_counter == 4){
+					if(d2Wi && (p2Wr_total_counter == 0)){
+						d2Wi = 0;
+ 9ce:	1d a6       	std	Y+45, r1	; 0x2d
+ 9d0:	1e a6       	std	Y+46, r1	; 0x2e
+ 9d2:	15 c0       	rjmp	.+42     	; 0x9fe <__LOCK_REGION_LENGTH__+0x5fe>
+				}
+			}
+			if(d2W){
+				d2W_counter++;
+				if(d2W_counter == 40){
+					d2W_counter = 0;
+ 9d4:	27 96       	adiw	r28, 0x07	; 7
+ 9d6:	1f ae       	std	Y+63, r1	; 0x3f
+ 9d8:	1e ae       	std	Y+62, r1	; 0x3e
+ 9da:	27 97       	sbiw	r28, 0x07	; 7
+					d2W = 0;
+					d2Wi = 1;
+ 9dc:	81 e0       	ldi	r24, 0x01	; 1
+ 9de:	8d a7       	std	Y+45, r24	; 0x2d
+ 9e0:	1e a6       	std	Y+46, r1	; 0x2e
+			}
+			if(d2W){
+				d2W_counter++;
+				if(d2W_counter == 40){
+					d2W_counter = 0;
+					d2W = 0;
+ 9e2:	19 8e       	std	Y+25, r1	; 0x19
+ 9e4:	1a 8e       	std	Y+26, r1	; 0x1a
+ 9e6:	0b c0       	rjmp	.+22     	; 0x9fe <__LOCK_REGION_LENGTH__+0x5fe>
+						//start water counter
+						p2Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p2Gr = 1;
+						p2Wr = 0;
+ 9e8:	19 8a       	std	Y+17, r1	; 0x11
+ 9ea:	1a 8a       	std	Y+18, r1	; 0x12
+						d2Wi = 0;
+						//start water counter
+						p2Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p2Gr = 1;
+ 9ec:	91 e0       	ldi	r25, 0x01	; 1
+ 9ee:	99 87       	std	Y+9, r25	; 0x09
+ 9f0:	1a 86       	std	Y+10, r1	; 0x0a
+ 9f2:	05 c0       	rjmp	.+10     	; 0x9fe <__LOCK_REGION_LENGTH__+0x5fe>
+						p2Wr = 0;
+ 9f4:	19 8a       	std	Y+17, r1	; 0x11
+ 9f6:	1a 8a       	std	Y+18, r1	; 0x12
+						d2Wi = 0;
+						//start water counter
+						p2Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p2Gr = 1;
+ 9f8:	21 e0       	ldi	r18, 0x01	; 1
+ 9fa:	29 87       	std	Y+9, r18	; 0x09
+ 9fc:	1a 86       	std	Y+10, r1	; 0x0a
+						p2Wr = 0;
+					}
+				}
+			}
+			if(d3W){
+ 9fe:	8b 8d       	ldd	r24, Y+27	; 0x1b
+ a00:	9c 8d       	ldd	r25, Y+28	; 0x1c
+ a02:	89 2b       	or	r24, r25
+ a04:	a9 f1       	breq	.+106    	; 0xa70 <__LOCK_REGION_LENGTH__+0x670>
+				d3W_counter++;
+ a06:	2b 96       	adiw	r28, 0x0b	; 11
+ a08:	2e ad       	ldd	r18, Y+62	; 0x3e
+ a0a:	3f ad       	ldd	r19, Y+63	; 0x3f
+ a0c:	2b 97       	sbiw	r28, 0x0b	; 11
+ a0e:	2f 5f       	subi	r18, 0xFF	; 255
+ a10:	3f 4f       	sbci	r19, 0xFF	; 255
+ a12:	2b 96       	adiw	r28, 0x0b	; 11
+ a14:	3f af       	std	Y+63, r19	; 0x3f
+ a16:	2e af       	std	Y+62, r18	; 0x3e
+ a18:	2b 97       	sbiw	r28, 0x0b	; 11
+				if(d3W_counter == 40){
+ a1a:	28 32       	cpi	r18, 0x28	; 40
+ a1c:	31 05       	cpc	r19, r1
+ a1e:	99 f0       	breq	.+38     	; 0xa46 <__LOCK_REGION_LENGTH__+0x646>
+					d3W_counter = 0;
+					d3W = 0;
+					d3Wi = 1;
+				}else if(d3W_counter == 4){
+ a20:	24 30       	cpi	r18, 0x04	; 4
+ a22:	31 05       	cpc	r19, r1
+ a24:	29 f5       	brne	.+74     	; 0xa70 <__LOCK_REGION_LENGTH__+0x670>
+					if(d3Wi && (p3Wr_total_counter == 0)){
+ a26:	89 a9       	ldd	r24, Y+49	; 0x31
+ a28:	9a a9       	ldd	r25, Y+50	; 0x32
+ a2a:	89 2b       	or	r24, r25
+ a2c:	b1 f0       	breq	.+44     	; 0xa5a <__LOCK_REGION_LENGTH__+0x65a>
+ a2e:	e5 96       	adiw	r28, 0x35	; 53
+ a30:	2e ad       	ldd	r18, Y+62	; 0x3e
+ a32:	3f ad       	ldd	r19, Y+63	; 0x3f
+ a34:	e5 97       	sbiw	r28, 0x35	; 53
+ a36:	23 2b       	or	r18, r19
+ a38:	b1 f4       	brne	.+44     	; 0xa66 <__LOCK_REGION_LENGTH__+0x666>
+						d3Wi = 0;
+						//start water counter
+						p3Wr = 1;
+ a3a:	31 e0       	ldi	r19, 0x01	; 1
+ a3c:	3b 8b       	std	Y+19, r19	; 0x13
+ a3e:	1c 8a       	std	Y+20, r1	; 0x14
+					d3W_counter = 0;
+					d3W = 0;
+					d3Wi = 1;
+				}else if(d3W_counter == 4){
+					if(d3Wi && (p3Wr_total_counter == 0)){
+						d3Wi = 0;
+ a40:	19 aa       	std	Y+49, r1	; 0x31
+ a42:	1a aa       	std	Y+50, r1	; 0x32
+ a44:	15 c0       	rjmp	.+42     	; 0xa70 <__LOCK_REGION_LENGTH__+0x670>
+				}
+			}
+			if(d3W){
+				d3W_counter++;
+				if(d3W_counter == 40){
+					d3W_counter = 0;
+ a46:	2b 96       	adiw	r28, 0x0b	; 11
+ a48:	1f ae       	std	Y+63, r1	; 0x3f
+ a4a:	1e ae       	std	Y+62, r1	; 0x3e
+ a4c:	2b 97       	sbiw	r28, 0x0b	; 11
+					d3W = 0;
+					d3Wi = 1;
+ a4e:	81 e0       	ldi	r24, 0x01	; 1
+ a50:	89 ab       	std	Y+49, r24	; 0x31
+ a52:	1a aa       	std	Y+50, r1	; 0x32
+			}
+			if(d3W){
+				d3W_counter++;
+				if(d3W_counter == 40){
+					d3W_counter = 0;
+					d3W = 0;
+ a54:	1b 8e       	std	Y+27, r1	; 0x1b
+ a56:	1c 8e       	std	Y+28, r1	; 0x1c
+ a58:	0b c0       	rjmp	.+22     	; 0xa70 <__LOCK_REGION_LENGTH__+0x670>
+						//start water counter
+						p3Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p3Gr = 1;
+						p3Wr = 0;
+ a5a:	1b 8a       	std	Y+19, r1	; 0x13
+ a5c:	1c 8a       	std	Y+20, r1	; 0x14
+						d3Wi = 0;
+						//start water counter
+						p3Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p3Gr = 1;
+ a5e:	91 e0       	ldi	r25, 0x01	; 1
+ a60:	9b 87       	std	Y+11, r25	; 0x0b
+ a62:	1c 86       	std	Y+12, r1	; 0x0c
+ a64:	05 c0       	rjmp	.+10     	; 0xa70 <__LOCK_REGION_LENGTH__+0x670>
+						p3Wr = 0;
+ a66:	1b 8a       	std	Y+19, r1	; 0x13
+ a68:	1c 8a       	std	Y+20, r1	; 0x14
+						d3Wi = 0;
+						//start water counter
+						p3Wr = 1;
+					}else{
+						//stop water timer and start grazing
+						p3Gr = 1;
+ a6a:	21 e0       	ldi	r18, 0x01	; 1
+ a6c:	2b 87       	std	Y+11, r18	; 0x0b
+ a6e:	1c 86       	std	Y+12, r1	; 0x0c
+						p3Wr = 0;
+					}
+				}
+			}
+			if(d4W){
+ a70:	8d 8d       	ldd	r24, Y+29	; 0x1d
+ a72:	9e 8d       	ldd	r25, Y+30	; 0x1e
+ a74:	89 2b       	or	r24, r25
+ a76:	09 f4       	brne	.+2      	; 0xa7a <__LOCK_REGION_LENGTH__+0x67a>
+ a78:	43 cc       	rjmp	.-1914   	; 0x300 <main+0x1f0>
+				d4W_counter++;
+ a7a:	2f 96       	adiw	r28, 0x0f	; 15
+ a7c:	2e ad       	ldd	r18, Y+62	; 0x3e
+ a7e:	3f ad       	ldd	r19, Y+63	; 0x3f
+ a80:	2f 97       	sbiw	r28, 0x0f	; 15
+ a82:	2f 5f       	subi	r18, 0xFF	; 255
+ a84:	3f 4f       	sbci	r19, 0xFF	; 255
+ a86:	2f 96       	adiw	r28, 0x0f	; 15
+ a88:	3f af       	std	Y+63, r19	; 0x3f
+ a8a:	2e af       	std	Y+62, r18	; 0x3e
+ a8c:	2f 97       	sbiw	r28, 0x0f	; 15
+				if(d4W_counter == 40){
+ a8e:	28 32       	cpi	r18, 0x28	; 40
+ a90:	31 05       	cpc	r19, r1
+ a92:	09 f4       	brne	.+2      	; 0xa96 <__LOCK_REGION_LENGTH__+0x696>
+ a94:	20 cc       	rjmp	.-1984   	; 0x2d6 <main+0x1c6>
+					d4W_counter = 0;
+					d4W = 0;
+					d4Wi = 1;
+				}else if(d4W_counter == 4){
+ a96:	24 30       	cpi	r18, 0x04	; 4
+ a98:	31 05       	cpc	r19, r1
+ a9a:	09 f0       	breq	.+2      	; 0xa9e <__LOCK_REGION_LENGTH__+0x69e>
+ a9c:	31 cc       	rjmp	.-1950   	; 0x300 <main+0x1f0>
+					if(d4Wi && (p4Wr_total_counter == 0)){
+ a9e:	8d ad       	ldd	r24, Y+61	; 0x3d
+ aa0:	9e ad       	ldd	r25, Y+62	; 0x3e
+ aa2:	89 2b       	or	r24, r25
+ aa4:	09 f4       	brne	.+2      	; 0xaa8 <__LOCK_REGION_LENGTH__+0x6a8>
+ aa6:	21 cc       	rjmp	.-1982   	; 0x2ea <main+0x1da>
+ aa8:	e7 96       	adiw	r28, 0x37	; 55
+ aaa:	2e ad       	ldd	r18, Y+62	; 0x3e
+ aac:	3f ad       	ldd	r19, Y+63	; 0x3f
+ aae:	e7 97       	sbiw	r28, 0x37	; 55
+ ab0:	23 2b       	or	r18, r19
+ ab2:	09 f0       	breq	.+2      	; 0xab6 <__LOCK_REGION_LENGTH__+0x6b6>
+ ab4:	20 cc       	rjmp	.-1984   	; 0x2f6 <main+0x1e6>
+						d4Wi = 0;
+						//start water counter
+						p4Wr = 1;
+ ab6:	31 e0       	ldi	r19, 0x01	; 1
+ ab8:	3d 8b       	std	Y+21, r19	; 0x15
+ aba:	1e 8a       	std	Y+22, r1	; 0x16
+					d4W_counter = 0;
+					d4W = 0;
+					d4Wi = 1;
+				}else if(d4W_counter == 4){
+					if(d4Wi && (p4Wr_total_counter == 0)){
+						d4Wi = 0;
+ abc:	1d ae       	std	Y+61, r1	; 0x3d
+ abe:	1e ae       	std	Y+62, r1	; 0x3e
+ ac0:	1f cc       	rjmp	.-1986   	; 0x300 <main+0x1f0>
+
+00000ac2 <_exit>:
+ ac2:	f8 94       	cli
+
+00000ac4 <__stop_program>:
+ ac4:	ff cf       	rjmp	.-2      	; 0xac4 <__stop_program>
